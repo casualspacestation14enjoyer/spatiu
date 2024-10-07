@@ -216,17 +216,7 @@
 		tooltip.maptext = ""
 
 		if(ticker.current_state >= GAME_STATE_SETTING_UP)
-			if(ishuman(object))
-				var/mob/living/carbon/human/H = object
-				if(H.warfare_faction)
-					if(H.warfare_faction == RED_TEAM)
-						tooltip.maptext = "<b><center style=\"text-shadow: 1px 1px 2px black;\"><span style=\"font-family: 'Small Fonts'\"><font color='#b27676'>[uppertext(object.name)]</font></span></center></b>"
-					else
-						tooltip.maptext = "<b><center style=\"text-shadow: 1px 1px 2px black;\"><span style=\"font-family: 'Small Fonts'\"><font color='#76abb2'>[uppertext(object.name)]</font></span></center></b>"
-				else
-					tooltip.maptext = "<b><center style=\"text-shadow: 1px 1px 2px black;\"><span style=\"font-family: 'Small Fonts'\">[uppertext(object.name)]</span></center></b>"
-			else
-				tooltip.maptext = "<b><center style=\"text-shadow: 1px 1px 2px black;\"><span style=\"font-family: 'Small Fonts'\">[uppertext(object.name)]</span></center></b>"
+			tooltip.maptext = "<b><center style=\"text-shadow: 1px 1px 2px black;\"><span style=\"font-family: 'Small Fonts'\">[uppertext(object.name)]</span></center></b>"
 
 
 //////////////

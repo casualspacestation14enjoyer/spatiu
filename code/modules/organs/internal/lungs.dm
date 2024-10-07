@@ -291,9 +291,9 @@
 				to_chat(owner, "<span class='danger'>You feel your face burning and a searing heat in your lungs!</span>")
 
 			switch(breath.temperature)
-				if(species.heat_level_1 to species.heat_level_2)
+				if(360 to 400)
 					damage = HEAT_GAS_DAMAGE_LEVEL_1
-				if(species.heat_level_2 to species.heat_level_3)
+				if(400 to 1000)
 					damage = HEAT_GAS_DAMAGE_LEVEL_2
 				else
 					damage = HEAT_GAS_DAMAGE_LEVEL_3

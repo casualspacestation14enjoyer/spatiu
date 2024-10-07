@@ -372,7 +372,6 @@
 			user.pixel_y += 5
 			M.plane = ABOVE_HUMAN_PLANE
 	deployed = TRUE
-	playsound(src, 'sound/weapons/mg_deploy.ogg', 100, FALSE)
 	update_icon(user)
 
 /obj/item/gun/projectile/automatic/mg08/proc/pack_up_mg(mob/user)

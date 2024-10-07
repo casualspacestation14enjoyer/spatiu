@@ -125,6 +125,16 @@
 
 #define ARGS_DEBUG log_debug("[__FILE__] - [__LINE__]") ; for(var/arg in args) { log_debug("\t[log_info_line(arg)]") }
 
+#define PROC_REF(X) (nameof(.proc/##X))
+
+#define VERB_REF(X) (nameof(.verb/##X))
+
+#define TYPE_PROC_REF(TYPE, X) (nameof(##TYPE.proc/##X))
+
+#define TYPE_VERB_REF(TYPE, X) (nameof(##TYPE.verb/##X))
+
+#define GLOBAL_PROC_REF(X) (/proc/##X)
+
 // Helper macros to aid in optimizing lazy instantiation of lists.
 // All of these are null-safe, you can use them without knowing if the list var is initialized yet
 

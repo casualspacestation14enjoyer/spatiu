@@ -2453,5 +2453,3 @@
 #include "maps\~unit_tests\unit_testing.dm"
 #include "~code\global_init.dm"
 // END_INCLUDE
-
-#include "__non-agpl-warfare/__secret.dme"

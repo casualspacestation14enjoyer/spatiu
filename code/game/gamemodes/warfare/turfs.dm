@@ -440,3 +440,36 @@
 	desc = "For building over water."
 	icon = 'icons/turf/trenches_turfs.dmi'
 	icon_state = "wood0"
+
+
+// spreadable water
+
+/obj/effect/sevenwater // TODO: slowdown and drowning
+	name = "water"
+	desc = "Salty."
+	icon = 'icons/obj/warfare.dmi'
+	icon_state = "trench_full"
+	density = FALSE
+
+/obj/effect/sevenwater/proc/get_adjacent_turfs()
+    var/list/adjacent = list()
+
+    // Directions to check (north, south, east, west)
+    for(var/dir in list(NORTH, SOUTH, EAST, WEST))
+        var/turf/T = get_step(src, dir)
+        if(T)
+            adjacent += T
+
+    return adjacent
+
+/obj/effect/sevenwater/proc/tryspread() // TODO: add functionality for open spaces
+	for(var/turf/S in get_adjacent_turfs())
+		if(!S.density)
+			if(!locate(/obj/effect/sevenwater) in S)
+				new /obj/effect/sevenwater(S)
+
+/obj/effect/sevenwater/Initialize()
+	START_PROCESSING(SSobj, src)
+
+/obj/effect/sevenwater/Process()
+	tryspread()

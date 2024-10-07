@@ -30,14 +30,7 @@
 		return 0
 
 	if(!isturf(A))
-		var/point_color = "#F00"
-		if(ishuman(A))
-			var/mob/living/carbon/human/H = A
-			if(H.warfare_faction == RED_TEAM)
-				point_color = "#b27676"
-			else
-				point_color = "#76abb2"
-		var/pointglow = filter(type = "drop_shadow", x = 0, y = -1, offset = 2, size = 1, color = point_color)
+		var/pointglow = filter(type = "drop_shadow", x = 0, y = -1, offset = 2, size = 1, color = "#F00")
 		remove_filter(A, pointglow)
 		LAZYADD(A.filters, pointglow)
 		addtimer(CALLBACK(src, .proc/remove_filter, A, pointglow), 20)
