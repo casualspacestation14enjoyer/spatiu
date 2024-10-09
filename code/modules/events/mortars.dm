@@ -7,8 +7,6 @@
 
 /datum/event/mortar/start()
 
-	area_hit = pick(GLOB.mortar_areas)
-
 	var/mortar_type = pick("gas", "shrapnel") // , "fire") //Fire lags the entire game, have to remove it for now.
 	to_chat(world, uppertext("<font size=5><b>INCOMING!! [area_hit.name]!!</b></font>"))
 	for(var/i = 1, i<4, i++)

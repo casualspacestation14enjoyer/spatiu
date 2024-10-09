@@ -2,7 +2,6 @@
 	iterations = 5
 	descriptor = "caves"
 	wall_type =  /turf/simulated/mineral
-	floor_type = /turf/simulated/floor/dirty/indestructable/lightless ///turf/simulated/floor/dirty/indestructable
 	target_turf_type = /turf/unsimulated/mask
 	var/mineral_sparse =  /turf/simulated/mineral/random
 	var/mineral_rich = /turf/simulated/mineral/random/high_chance

@@ -67,7 +67,7 @@
 		return FALSE
 
 	return TRUE
-
+/*
 /turf/simulated/floor/do_climb(var/mob/living/user)
 	if(!can_climb(user))
 		return
@@ -322,18 +322,15 @@
 		do_climb(target)
 	else
 		return ..()
-
+*/
 /turf/simulated/floor/exoplanet/water/shallow/Cross(var/atom/A)//People who are on fire go out.
 	if(isliving(A))
 		var/mob/living/L = A
 		L.ExtinguishMob()
 
-/turf/simulated/floor/exoplanet/water/shallow/lightless
-	has_light = FALSE
-
 /turf/simulated/floor/exoplanet/water/shallow/New()
 	..()
-	if((!locate(/obj/effect/lighting_dummy/daylight) in src) && has_light)
+	if((!locate(/obj/effect/lighting_dummy/daylight) in src))
 		new /obj/effect/lighting_dummy/daylight(src)
 	temperature = T0C - 80
 	for(var/obj/effect/water/bottom/B in src)
@@ -444,32 +441,65 @@
 
 // spreadable water
 
-/obj/effect/sevenwater // TODO: slowdown and drowning
+/obj/effect/sevenwater // TODO: MAKE THIS SHIT FUCKING WORK!!!
 	name = "water"
 	desc = "Salty."
 	icon = 'icons/obj/warfare.dmi'
 	icon_state = "trench_full"
 	density = FALSE
 
-/obj/effect/sevenwater/proc/get_adjacent_turfs()
-    var/list/adjacent = list()
+/obj/structure/sevendrain
+	name = "drain"
+	desc = "Used for draining water. The water that gets sucked in is automatically ejected into the cold, unforgiving ocean."
+	icon = 'icons/obj/warfare.dmi'
+	icon_state = "drain"
+	density = FALSE
+	anchored = TRUE
+	var/closed = FALSE
+	var/welded = FALSE
+	var/id = null
+	var/_wifi_id
+	var/datum/wifi/receiver/button/sevendrain/wifi_receiver
 
-    // Directions to check (north, south, east, west)
-    for(var/dir in list(NORTH, SOUTH, EAST, WEST))
-        var/turf/T = get_step(src, dir)
-        if(T)
-            adjacent += T
+/obj/structure/sevendrain/update_icon()
+	..()
+	if(closed)
+		icon_state = "[initial(icon_state)]-closed"
+	else if(welded)
+		icon_state = "[initial(icon_state)]-welded"
 
-    return adjacent
+/obj/structure/sevendrain/attack_hand(mob/user)
+	if(welded)
+		return
+	if(closed)
+		to_chat(user, "<span class='notice'>I manually start opening the drain.</span>")
+		if(do_after(user, 3 SECONDS, src, TRUE)) // TODO: add sound
+			closed = TRUE
+	else
+		to_chat(user, "<span class='notice'>I manually start closing the drain.</span>")
+		if(do_after(user, 3 SECONDS, src, TRUE)) // TODO: add sound
+			closed = TRUE
 
-/obj/effect/sevenwater/proc/tryspread() // TODO: add functionality for open spaces
+/obj/structure/sevendrain/Destroy()
+	QDEL_NULL(wifi_receiver)
+	return ..()
+
+/obj/structure/sevendrain/proc/Drain()
+	if(closed || welded)
+		return
 	for(var/turf/S in get_adjacent_turfs())
 		if(!S.density)
-			if(!locate(/obj/effect/sevenwater) in S)
-				new /obj/effect/sevenwater(S)
+			var/obj/effect/sevenwater/SW = locate() in S
+			if(SW)
+				playsound(src, pick('sound/spatiu/gurgle1.ogg','sound/spatiu/gurgle2.ogg','sound/spatiu/gurgle3.ogg','sound/spatiu/gurgle4.ogg'), 65)
+				qdel(SW)
 
-/obj/effect/sevenwater/Initialize()
+/obj/structure/sevendrain/Initialize()
+	. = ..()
 	START_PROCESSING(SSobj, src)
+	if(_wifi_id)
+		wifi_receiver = new(_wifi_id, src)
 
-/obj/effect/sevenwater/Process()
-	tryspread()
+/obj/structure/sevendrain/Process()
+	update_icon()
+	Drain()

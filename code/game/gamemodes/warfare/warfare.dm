@@ -40,15 +40,6 @@
 	if(client)
 		client.warfare_deaths++
 
-	// as far as i know there are no immediate jobtype vars in mind or human, so here we go
-	if(SSjobs?.GetJobByTitle(job)?.type == /datum/job/soldier/red_soldier/captain)
-		for(var/X in SSwarfare.red.team)
-			var/mob/living/carbon/human/H = X
-			H.add_event("captain death", /datum/happiness_event/captain_death)
-	if(SSjobs?.GetJobByTitle(job)?.type == /datum/job/soldier/blue_soldier/captain)
-		for(var/X in SSwarfare.blue.team)
-			var/mob/living/carbon/human/H = X
-			H.add_event("captain death", /datum/happiness_event/captain_death)
 	if(SSjobs?.GetJobByTitle(job)?.open_when_dead)//When the person dies who has this job, free this role again.
 		SSjobs.allow_one_more(job)
 

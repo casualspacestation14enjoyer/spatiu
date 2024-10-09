@@ -108,6 +108,7 @@ var/global/repository/radiation/radiation_repository = new()
 	flat_radiate(epicentre, power, world.maxx, respect_maint)
 
 /turf
+	var/flooded // Whether or not this turf is absolutely flooded ie. a water source.
 	var/cached_rad_resistance = 0
 
 /turf/proc/calc_rad_resistance()

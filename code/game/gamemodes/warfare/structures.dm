@@ -411,7 +411,7 @@
 	plane = ABOVE_OBJ_PLANE
 	layer = BASE_MOB_LAYER
 	atom_flags = ATOM_FLAG_CLIMBABLE
-
+/*
 /obj/structure/anti_tank/can_climb(var/mob/living/user, post_climb_check=0)
 	if(!iswarfare())
 		return TRUE
@@ -430,7 +430,7 @@
 	if(!SSwarfare.battle_time)
 		return FALSE
 	return TRUE
-
+*/
 
 /obj/item/projectile/bullet/pellet/fragment/landmine
 	damage = 100
@@ -525,8 +525,6 @@
 	if(istype(M))
 		if(armed)
 			blow()
-
-
 
 //Activate this to win!
 /obj/structure/destruction_computer

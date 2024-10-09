@@ -96,8 +96,3 @@ mob/observer/check_airflow_movable()
 				//stat("[BLUE_TEAM] capture points:", SSwarfare.blue.points)
 				stat("[RED_TEAM] reinforcements:", SSwarfare.red.left)
 				//stat("[RED_TEAM] capture points:", SSwarfare.red.points)
-
-			for(var/area/A in GLOB.red_captured_zones)
-				stat("Red Captured Trench:", A)
-			for(var/area/A in GLOB.blue_captured_zones)
-				stat("Blue Captured Trench:", A)

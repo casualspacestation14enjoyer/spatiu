@@ -40,6 +40,17 @@
 	else
 		return null
 
+/obj/proc/get_adjacent_turfs()
+    var/list/adjacent = list()
+
+    // Directions to check (north, south, east, west)
+    for(var/dir in list(NORTH, SOUTH, EAST, WEST))
+        var/turf/T = get_step(src, dir)
+        if(T)
+            adjacent += T
+
+    return adjacent
+
 /obj/proc/updateUsrDialog()
 	if(in_use)
 		var/is_in_use = 0

@@ -15,7 +15,6 @@
 		/obj/item/clothing/suit/captunic/capjacket,
 		/obj/item/clothing/head/caphat/cap,
 		/obj/item/clothing/under/rank/captain,
-		/obj/item/clothing/suit/armor/vest/opvest,
 		/obj/item/cartridge/captain,
 		/obj/item/clothing/head/helmet,
 		/obj/item/clothing/shoes/brown,
@@ -41,7 +40,6 @@
 /obj/structure/closet/secure_closet/hop/WillContain()
 	return list(
 		/obj/item/clothing/glasses/sunglasses,
-		/obj/item/clothing/suit/armor/vest/opvest,
 		/obj/item/clothing/head/helmet,
 		/obj/item/cartridge/hop,
 		/obj/item/device/radio/headset/heads/hop,
@@ -162,7 +160,6 @@
 	return list(
 		new/datum/atom_creator/weighted(list(/obj/item/storage/backpack/security, /obj/item/storage/backpack/satchel/satchel_sec)),
 		new/datum/atom_creator/simple(/obj/item/storage/backpack/dufflebag/sec, 50),
-		/obj/item/clothing/suit/armor/vest/opvest,
 		/obj/item/clothing/head/helmet,
 		/obj/item/clothing/mask/gas/security,
 		/obj/item/clothing/mask/balaclava,

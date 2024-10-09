@@ -509,14 +509,6 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	var/timedifference = world.time - timeofdeath
 	if(iswarfare())//If it's warfare then respawn is cut down to the config time, which is usually 2 minutes.
 		respawn_time = config.warfare_respawn_time
-		if(client.warfare_faction == RED_TEAM)
-			if(GLOB.red_captured_zones.len < 1)
-				to_chat(src, "We control no trenches, we cannot respawn.")
-				return FALSE
-		else if(client.warfare_faction == BLUE_TEAM)
-			if(GLOB.blue_captured_zones.len < 1)
-				to_chat(src, "We control no trenches, we cannot respawn.")
-				return FALSE
 
 	if(!client.holder && respawn_time && timeofdeath && timedifference < respawn_time MINUTES)
 		var/timedifference_text = time2text(respawn_time MINUTES - timedifference,"mm:ss")

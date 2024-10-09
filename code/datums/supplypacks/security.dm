@@ -12,8 +12,10 @@
 
 /decl/hierarchy/supply_pack/security/lightarmor
 	name = "Armor - Light"
+	/*
 	contains = list(/obj/item/clothing/suit/armor/vest/opvest = 4,
 					/obj/item/clothing/head/helmet =4)
+	*/
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Light armor crate"
@@ -30,6 +32,7 @@
 
 /decl/hierarchy/supply_pack/security/tacticalarmor
 	name = "Armor - Tactical"
+	/*
 	contains = list(/obj/item/clothing/under/tactical,
 					/obj/item/clothing/suit/armor/vest/opvest,
 					/obj/item/clothing/head/helmet/tactical,
@@ -38,6 +41,7 @@
 					/obj/item/storage/belt/security/tactical,
 					/obj/item/clothing/shoes/tactical,
 					/obj/item/clothing/gloves/tactical)
+	*/
 	cost = 45
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Tactical armor crate"
