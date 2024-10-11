@@ -2440,6 +2440,3 @@
 #include "maps\~mapsystem\maps_unit_testing.dm"
 #include "maps\~unit_tests\unit_testing.dm"
 #include "~code\global_init.dm"
-#include "code\__defines\fluids.dm"
-#include "code\controllers\subsystems\fluids.dm"
-#include "code\game\objects\fluids.dm"

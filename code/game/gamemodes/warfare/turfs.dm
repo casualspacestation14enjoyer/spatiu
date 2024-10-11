@@ -475,10 +475,13 @@
 		to_chat(user, "<span class='notice'>I manually start opening the drain.</span>")
 		if(do_after(user, 3 SECONDS, src, TRUE)) // TODO: add sound
 			closed = TRUE
+			START_PROCESSING(SSobj, src)
 	else
 		to_chat(user, "<span class='notice'>I manually start closing the drain.</span>")
 		if(do_after(user, 3 SECONDS, src, TRUE)) // TODO: add sound
 			closed = TRUE
+			STOP_PROCESSING(SSobj, src)
+	update_icon()
 
 /obj/structure/sevendrain/Destroy()
 	QDEL_NULL(wifi_receiver)
@@ -496,10 +499,10 @@
 
 /obj/structure/sevendrain/Initialize()
 	. = ..()
-	START_PROCESSING(SSobj, src)
+	if(!closed)
+		START_PROCESSING(SSobj, src)
 	if(_wifi_id)
 		wifi_receiver = new(_wifi_id, src)
 
 /obj/structure/sevendrain/Process()
-	update_icon()
 	Drain()

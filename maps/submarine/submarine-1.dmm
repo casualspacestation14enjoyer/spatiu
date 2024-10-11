@@ -1,7 +1,7 @@
-"a" = (/obj/effect/sevenwater/full,/turf/simulated/floor/beach/sand,/area/space)
-"n" = (/turf/simulated/wall/titanium,/area/space)
-"B" = (/obj/effect/landmark/start/warden,/turf/simulated/floor/reinforced,/area/space)
-"C" = (/turf/simulated/floor/reinforced,/area/space)
+"a" = (/turf/simulated/floor/beach/sand,/area/space)
+"n" = (/turf/simulated/wall/titanium,/area/centcom)
+"B" = (/obj/effect/landmark{name = "Observer-Start"},/turf/simulated/floor/reinforced,/area/centcom)
+"C" = (/turf/simulated/floor/reinforced,/area/centcom)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
