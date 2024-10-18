@@ -102,7 +102,7 @@
 	var/breath_pressure = 16                          // Minimum partial pressure safe for breathing, kPa
 	var/breath_type = "oxygen"                        // Non-oxygen gas breathed, if any.
 	var/poison_type = "phoron"                        // Poisonous air.
-	var/exhale_type = "carbon_dioxide"                // Exhaled gas type.
+	var/exhale_type //= "carbon_dioxide"                // Exhaled gas type.
 	var/cold_level_1 = 243                           // Cold damage level 1 below this point. -30 Celsium degrees
 	var/cold_level_2 = 200                            // Cold damage level 2 below this point.
 	var/cold_level_3 = 120                            // Cold damage level 3 below this point.
@@ -232,10 +232,8 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 	if(!vision_organ && has_organ[BP_EYES])
 		vision_organ = BP_EYES
 	//If the species has lungs, they are the default breathing organ
-	/*
 	if(!breathing_organ && has_organ[BP_LUNGS])
 		breathing_organ = BP_LUNGS
-	*/
 
 	unarmed_attacks = list()
 	for(var/u_type in unarmed_types)

@@ -307,13 +307,10 @@ meteor_act
 		//Apply blood
 		attack_bloody(I, user, effective_force, hit_zone)
 
-	//This was commented out because critical successes are OP as shit. Now they're back.
-	/*
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.statscheck(skills = H.SKILL_LEVEL(melee)) == CRIT_SUCCESS)
 			resolve_critical_hit()
-	*/ //And now it's commented out again.
 
 	if(hit_zone == BP_R_HAND || hit_zone == BP_L_HAND)
 		var/list/holding= list(src.get_active_hand(), src.get_inactive_hand())
@@ -654,9 +651,15 @@ meteor_act
 	kickdam *= strToDamageModifier(user.my_stats[STAT(str)].level)
 	user.adjustStaminaLoss(rand(10,15))//Kicking someone is a big deal.
 	if(kickdam)
-		playsound(user.loc, 'sound/weapons/kick.ogg', 50, 0)
+		var/stomp = FALSE
+		if(user.loc == src.loc)
+			stomp = TRUE
+		if(stomp)
+			playsound(user.loc, 'sound/weapons/punch_04.ogg', 50, 0)
+		else
+			playsound(user.loc, 'sound/weapons/kick.ogg', 50, 0)
 		apply_damage(kickdam, BRUTE, hit_zone, armour)
-		user.visible_message("<span class=danger>[user] kicks [src] in the [affecting.name]!<span>")
+		user.visible_message("<span class=danger>[user] [stomp ? "stomps" : "kicks"] [src] in the [affecting.name]!<span>")
 		admin_attack_log(user, src, "Has kicked [src]", "Has been kicked by [user].")
 	else
 		user.visible_message("<span class=danger>[user] tried to kick [src] in the [affecting.name], but missed!<span>")
@@ -668,28 +671,28 @@ meteor_act
 	var/result = rand(1,3)
 
 	if(!I)
-		visible_message("<span class='danger'>[src] punches themself in the face!</span>")
+		visible_message("<span class='interface'>[src] punches themself in the face!</span>")
 		attack_hand(src)
 		return
 
 	switch(result)
 		if(1)//They drop their weapon.
-			visible_message("<span class='danger'><big>CRITICAL FAILURE!</big></span>")
+			visible_message("<span class='interface'><big>CRITICAL FAILURE!</big></span>")
 			I.disarm(src)
 			return
 		if(2)
-			visible_message("<span class='danger'><big>CRITICAL FAILURE! [src] botches the attack, stumbles, and falls!</big></span>")
+			visible_message("<span class='interface'><big>CRITICAL FAILURE! [src] botches the attack, stumbles, and falls!</big></span>")
 			playsound(loc, 'sound/weapons/punchmiss.ogg', 50, 1)
 			KnockDown()
 			return
 		if(3)
-			visible_message("<span class='danger'><big>CRITICAL FAILURE! [src] botches the attack and hits themself!</big></span>")
+			visible_message("<span class='interface'><big>CRITICAL FAILURE! [src] botches the attack and hits themself!</big></span>")
 			I.attack(src, src, zone_sel)
 			apply_damage(rand(5,10), BRUTE)
 
 
 /mob/living/proc/resolve_critical_miss_unarmed()
-	visible_message("<span class='danger'>[src] punches themself in the face!</span>")
+	visible_message("<span class='interface'>[src] punches themself in the face!</span>")
 	attack_hand(src)
 	return
 
@@ -698,18 +701,18 @@ meteor_act
 
 	switch(result)
 		if(1)
-			visible_message("<span class='danger'><big>CRITICAL HIT! IT MUST BE PAINFUL</big></span>")
+			visible_message("<span class='interface'><big>CRITICAL HIT! IT MUST BE PAINFUL</big></span>")
 			apply_damage(rand(5,10), BRUTE)
 			return
 
 		if(2)
-			visible_message("<span class='danger'><big>CRITICAL HIT! [src] is stunned!</big></span>")
+			visible_message("<span class='interface'><big>CRITICAL HIT! [src] is stunned!</big></span>")
 			Weaken(1)
 			Stun(3)
 			return
 
 		if(3)
-			visible_message("<span class='danger'><big>CRITICAL HIT! [src] is knocked unconcious by the blow!</big></span>")
+			visible_message("<span class='interface'><big>CRITICAL HIT! [src] is knocked unconcious by the blow!</big></span>")
 			apply_effect(10, PARALYZE)
 			return
 

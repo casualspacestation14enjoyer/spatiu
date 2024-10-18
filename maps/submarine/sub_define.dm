@@ -14,6 +14,10 @@
 	lobby_icon = 'maps/oldfare/fullscreen.dmi'
 	lobby_screens = list("lobby1","lobby2","lobby3","lobby4","lobby5", "lobby6")
 
+	allowed_jobs = list(
+		/datum/job/kapitain
+	)
+
 	station_levels = list(1,2)
 	contact_levels = list(1,2)
 	player_levels = list(1,2)

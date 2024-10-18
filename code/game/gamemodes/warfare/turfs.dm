@@ -446,7 +446,45 @@
 	desc = "Salty."
 	icon = 'icons/obj/warfare.dmi'
 	icon_state = "trench_full"
+	plane = ABOVE_HUMAN_PLANE
+	layer = ABOVE_HUMAN_LAYER
 	density = FALSE
+	anchored = TRUE
+
+/obj/effect/sevenwater/ocean
+	icon_state = "waterfullblock"
+
+/obj/effect/sevenwater/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	..()
+
+/obj/effect/sevenwater/Initialize()
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
+/obj/effect/sevenwater/proc/getdirections()
+    var/list/adjacent = list()
+
+    // Directions to check (north, south, east, west)
+    for(var/dir in list(NORTH,SOUTH,EAST,WEST,DOWN))
+        var/turf/T = get_step(src, dir)
+        if(T)
+            adjacent += T
+
+    return adjacent
+
+/obj/effect/sevenwater/Process()
+	spawn(5)
+		for(var/turf/C in getdirections()) // Get it? C? Like sea? Haha. Kill me.
+			var/obj/effect/sevenwater/SW = locate() in C
+			if(C.density)
+				continue
+			if(SW)
+				continue
+			else
+				if(locate(/obj/structure/sevendrain) in C) // No flooding allowed!
+					break
+				new /obj/effect/sevenwater(C)
 
 /obj/structure/sevendrain
 	name = "drain"
@@ -485,24 +523,27 @@
 
 /obj/structure/sevendrain/Destroy()
 	QDEL_NULL(wifi_receiver)
+	STOP_PROCESSING(SSprocessing, src)
 	return ..()
 
-/obj/structure/sevendrain/proc/Drain()
+/obj/structure/sevendrain/Initialize()
+	. = ..()
+	if(!closed)
+		START_PROCESSING(SSprocessing, src)
+	if(_wifi_id)
+		wifi_receiver = new(_wifi_id, src)
+
+/obj/structure/sevendrain/Process()
 	if(closed || welded)
 		return
-	for(var/turf/S in get_adjacent_turfs())
+	for(var/turf/S in get_all_adjacent_turfs())
+		if(!loc.density)
+			var/obj/effect/sevenwater/W = locate() in S
+			if(W)
+				playsound(src, pick('sound/spatiu/gurgle1.ogg','sound/spatiu/gurgle2.ogg','sound/spatiu/gurgle3.ogg','sound/spatiu/gurgle4.ogg'), 65)
+				qdel(W)
 		if(!S.density)
 			var/obj/effect/sevenwater/SW = locate() in S
 			if(SW)
 				playsound(src, pick('sound/spatiu/gurgle1.ogg','sound/spatiu/gurgle2.ogg','sound/spatiu/gurgle3.ogg','sound/spatiu/gurgle4.ogg'), 65)
 				qdel(SW)
-
-/obj/structure/sevendrain/Initialize()
-	. = ..()
-	if(!closed)
-		START_PROCESSING(SSobj, src)
-	if(_wifi_id)
-		wifi_receiver = new(_wifi_id, src)
-
-/obj/structure/sevendrain/Process()
-	Drain()

@@ -109,7 +109,7 @@ var/religion_name = null
 
 
 	if (config && config.server_name)
-		world.name = "[config.server_name]: [name]"
+		world.name = "[config.server_name]"
 	else
 		world.name = GLOB.using_map.station_name
 
@@ -119,7 +119,7 @@ var/religion_name = null
 	GLOB.using_map.station_name = name
 
 	if (config && config.server_name)
-		world.name = "[config.server_name]: [name]"
+		world.name = "[config.server_name]"
 	else
 		world.name = name
 

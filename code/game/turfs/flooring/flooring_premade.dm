@@ -315,6 +315,10 @@
 	name = "sand"
 	icon_state = "sand"
 
+/turf/simulated/floor/beach/sand/water/Initialize()
+	. = ..()
+	new /obj/effect/sevenwater/ocean(src)
+
 /turf/simulated/floor/beach/sand/desert
 	icon_state = "desert"
 	has_resources = 1

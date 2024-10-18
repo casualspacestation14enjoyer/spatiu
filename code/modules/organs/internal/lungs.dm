@@ -160,7 +160,7 @@
 	owner.oxygen_alert = failed_inhale * 2
 
 	var/inhaled_gas_used = inhaling/2
-	breath.adjust_gas(breath_type, -inhaled_gas_used, update = 0) //update afterwards
+	//breath.adjust_gas(breath_type, -inhaled_gas_used, update = 0) //update afterwards
 
 	if(exhale_type)
 		breath.adjust_gas_temp(exhale_type, inhaled_gas_used, owner.bodytemperature, update = 0) //update afterwards
@@ -260,7 +260,7 @@
 		else
 			owner.emote(pick("shiver","twitch"))
 
-	if(damage || owner.chem_effects[CE_BREATHLOSS] || world.time > last_failed_breath + 2 MINUTES)
+	if(damage || owner.chem_effects[CE_BREATHLOSS] || world.time > last_failed_breath + 2 SECONDS)
 		owner.adjustOxyLoss(HUMAN_MAX_OXYLOSS*breath_fail_ratio)
 
 	owner.oxygen_alert = max(owner.oxygen_alert, 2)

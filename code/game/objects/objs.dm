@@ -40,11 +40,22 @@
 	else
 		return null
 
+/obj/proc/get_all_adjacent_turfs()
+    var/list/adjacent = list()
+
+    // Directions to check (north, south, east, west)
+    for(var/dir in GLOB.alldirs)
+        var/turf/T = get_step(src, dir)
+        if(T)
+            adjacent += T
+
+    return adjacent
+
 /obj/proc/get_adjacent_turfs()
     var/list/adjacent = list()
 
     // Directions to check (north, south, east, west)
-    for(var/dir in list(NORTH, SOUTH, EAST, WEST))
+    for(var/dir in GLOB.cardinal)
         var/turf/T = get_step(src, dir)
         if(T)
             adjacent += T

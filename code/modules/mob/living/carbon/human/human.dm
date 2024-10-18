@@ -1692,6 +1692,10 @@
 				user.visible_message("<font color='green'><b>[user] waves friendly to [src].</b></font>")
 				return
 
+	else if(intent == I_HURT && user.zone_sel.selecting == BP_MOUTH)
+		user.visible_message("<span class='danger'>[user] bites [src]!</span>")
+		return
+
 	else if(lying && intent == I_HELP)
 		check_pulse()
 		return

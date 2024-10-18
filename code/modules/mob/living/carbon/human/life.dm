@@ -1,7 +1,7 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:32
 
 //NOTE: Breathing happens once per FOUR TICKS, unless the last breath fails. In which case it happens once per ONE TICK! So oxyloss healing is done once per 4 ticks while oxyloss damage is applied once per tick!
-#define HUMAN_MAX_OXYLOSS 1 //Defines how much oxyloss humans can get per tick. A tile with no air at all (such as space) applies this value, otherwise it's a percentage of it.
+#define HUMAN_MAX_OXYLOSS 25 //Defines how much oxyloss humans can get per tick. A tile with no air at all (such as space) applies this value, otherwise it's a percentage of it.
 
 #define HUMAN_CRIT_TIME_CUSHION (10 MINUTES) //approximate time limit to stabilize someone in crit
 #define HUMAN_CRIT_HEALTH_CUSHION (config.health_threshold_crit - config.health_threshold_dead)
@@ -126,6 +126,10 @@
 /mob/living/carbon/proc/check_drowning()
 	if(lying && istype(loc, /turf/simulated/floor/exoplanet/water/shallow))
 		losebreath++ //= max(losebreath + 2, 3)
+	if(locate(/obj/effect/sevenwater) in loc)
+		losebreath = max(losebreath+ 2, 3)
+		to_chat(src, "<span class='danger'>I FEEL LIKE I'M BEING CRUSHED LIKE A FUCKING CAN!!!</span>")
+		adjustBruteLoss(25)
 
 /mob/living/carbon/human/breathe()
 	var/species_organ = species.breathing_organ
@@ -748,7 +752,7 @@
 				healths.icon_state = "health_numb"
 
 			else if(using_alt_hud)//If we're using Lunahud we want the lunahud health face.
-				var/mhealth = (getBruteLoss() + getFireLoss())
+				var/mhealth = (getBruteLoss() + getFireLoss() + getOxyLoss())
 				switch(mhealth)
 					if(100 to INFINITY)		healths.icon_state = "health6"
 					if(80 to 100)			healths.icon_state = "health5"
