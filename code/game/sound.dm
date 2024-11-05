@@ -254,6 +254,7 @@ var/const/FALLOFF_SOUNDS = 0.5
 			if ("fracture") soundin = pick(GLOB.fracture_sound)
 			if ("light_bic") soundin = pick(GLOB.lighter_sound)
 			if ("keyboard") soundin = pick(GLOB.keyboard_sound)
+			if ("keyboardlong") soundin = pick(GLOB.keyboard_sound_long)
 			if ("keystroke") soundin = pick(GLOB.keystroke_sound)
 			if ("switch") soundin = pick(GLOB.switch_sound)
 			if ("button") soundin = pick(GLOB.button_sound)

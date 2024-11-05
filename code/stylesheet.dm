@@ -75,6 +75,7 @@ h1.alert, h2.alert		{color: #ffffff;}
 .passive				{color: #660000;}
 
 .danger					{color: #ff0000; font-weight: bold;}
+.terminal				{color: #4af626;}
 .warning				{color: #ff0000; font-style: italic;}
 .boldannounce			{color: #ff0000; font-weight: bold;}
 .rose					{color: #ff5050;}

@@ -65,6 +65,7 @@ h1.alert, h2.alert	{color: #c9c1ba;font-family: Pterra, TrueType;}
 .crit					{color: #c71d76;}
 .userdanger				{color: #c71d76;	font-weight: bold;	font-size: 120%;}
 .danger					{color: #b9322b;	font-weight: bold;}
+.terminal				{color: #4af626;}
 .warning				{color: #bb4e28;	font-size: 75%;}
 .boldwarning			{color: #bb4e28;	font-weight: bold}
 .announce				{color: #c51e1e;	font-weight: bold;}
