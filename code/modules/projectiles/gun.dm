@@ -83,7 +83,7 @@
 	var/combustion	//whether it creates hotspot when fired
 	var/is_jammed = FALSE	//Whether this gun is jammed
 	var/condition = 100
-	var/safety = TRUE	//Whether or not the safety is on.
+	var/safety = FALSE	//Whether or not the safety is on.
 	var/broken = FALSE //weapon broken or no
 	var/jammed_icon
 	var/gun_type = "generic"

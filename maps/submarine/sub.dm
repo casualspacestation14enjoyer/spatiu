@@ -1,5 +1,4 @@
 #if !defined(using_map_DATUM)
-	#include "jobs/commanders.dm"
 	#include "submarine-1.dmm"
 	#include "../../code/modules/lobby_music/generic_songs.dm"
 

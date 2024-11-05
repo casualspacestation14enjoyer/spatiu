@@ -123,16 +123,22 @@
 		return 0
 	return 1
 
-/mob/living/carbon/proc/check_drowning()
+/mob/living/carbon/human/proc/check_drowning()
 	if(lying && istype(loc, /turf/simulated/floor/exoplanet/water/shallow))
 		losebreath++ //= max(losebreath + 2, 3)
 	if(locate(/obj/effect/sevenwater) in loc)
-		losebreath = max(losebreath+ 2, 3)
-		to_chat(src, "<span class='danger'>I FEEL LIKE I'M BEING CRUSHED LIKE A FUCKING CAN!!!</span>")
-		adjustBruteLoss(25)
+		if(wear_suit && (wear_suit.item_flags & ITEM_FLAG_STOPPRESSUREDAMAGE) && head && (head.item_flags & ITEM_FLAG_STOPPRESSUREDAMAGE))
+			losebreath = max(losebreath+ 2, 3)
+			to_chat(src, "<span class='danger'>I'M BEING [pick("CRUSHED","DESTROYED","COMPRESSED","PULPED")] LIKE A FUCKING CAN!!!</span>")
+			adjustBruteLoss(25)
+			var/obj/item/organ/internal/lungs/sponge = internal_organs_by_name[BP_LUNGS]
+			if(sponge)
+				sponge.take_damage(10)
 
 /mob/living/carbon/human/breathe()
 	var/species_organ = species.breathing_organ
+
+	check_drowning()
 
 	if(species_organ)
 		var/active_breaths = 0

@@ -304,6 +304,7 @@
 	A.AltClick(src)
 
 /atom/proc/AltClick(var/mob/user)
+	/*
 	var/turf/T = get_turf(src)
 	if(T && (isturf(loc) || isturf(src)) && user.TurfAdjacent(T))
 		if(user.listed_turf == T)
@@ -311,6 +312,7 @@
 		else
 			user.listed_turf = T
 			user.client.statpanel = "Turf"
+	*/
 	return 1
 
 /mob/proc/AltRightClickOn(var/atom/A)

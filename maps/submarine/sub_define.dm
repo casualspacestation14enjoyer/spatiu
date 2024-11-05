@@ -34,6 +34,10 @@
 	emergency_shuttle_recall_message = "The emergency shuttle has been recalled"
 	map_lore = "Underwater."
 
+	allowed_jobs = list(
+		/datum/job/kapitain
+	)
+
 //Overriding event containers to remove random events.
 /datum/event_container/mundane
 	available_events = list(
