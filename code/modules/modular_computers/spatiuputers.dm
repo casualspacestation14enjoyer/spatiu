@@ -115,6 +115,10 @@
 				return
 			playsound(src, "keyboardlong", 40)
 			sleep(5)
+			sendmessage("INPUT ACCEPTED [print], VOICE MODULATOR STARTING...", H)
+			sleep(10)
+			sendmessage("Modulated. Playback activated",H)
+			sleep(4)
 			speak(print)
 		if("clear","clearlogs")
 			sleep(3)
@@ -165,6 +169,7 @@
 	name = "computer desk"
 	icon_state = "compdesk"
 	sysfile = "computingdesk_os"
+	density = TRUE
 
 /obj/machinery/kaos/spatiuputer/terminal
 	name = "terminal"
@@ -175,6 +180,7 @@
 	name = "computing block"
 	icon_state = "bigmachine"
 	sysfile = "bigg_os"
+	density = TRUE
 
 // floppy disks
 
@@ -212,8 +218,28 @@
 			PC.sendmessage("Defragmented! Optimized by [rand(1,98)]%.",H)
 		if("stopexec","stopexecutefromdisk","execfrompc")
 			sleep(3)
-			sendmessage("Executing from disk is now disabled.",H)
-			executefromdisk = FALSE
+			PC.sendmessage("Executing from disk is now disabled.",H)
+			PC.executefromdisk = FALSE
+		else
+			sleep(5)
+			PC.sendmessage("Unknown Command",H)
+
+/obj/item/floppy/scrungus
+	writtenon = "SCRUNGUS v3.1"
+
+/obj/item/floppy/scrungus/processcommand(command, mob/living/carbon/human/H, obj/machinery/kaos/spatiuputer/PC)
+	if(!command || !H || !PC)
+		return
+	switch(command)
+		if("scrungus")
+			sleep(3)
+			PC.sendmessage("SCRUNGUS ACTIVATED.",H)
+			for(var/i=0, i<10, i++)
+				PC.sendmessage("SCRUNGUS NUMBER [i]",H)
+		if("stopexec","stopexecutefromdisk","execfrompc")
+			sleep(3)
+			PC.sendmessage("Executing from disk is now disabled.",H)
+			PC.executefromdisk = FALSE
 		else
 			sleep(5)
 			PC.sendmessage("Unknown Command",H)

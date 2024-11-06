@@ -127,7 +127,7 @@
 	if(lying && istype(loc, /turf/simulated/floor/exoplanet/water/shallow))
 		losebreath++ //= max(losebreath + 2, 3)
 	if(locate(/obj/effect/sevenwater) in loc)
-		if(wear_suit && (wear_suit.item_flags & ITEM_FLAG_STOPPRESSUREDAMAGE) && head && (head.item_flags & ITEM_FLAG_STOPPRESSUREDAMAGE))
+		if(!(wear_suit && (wear_suit.item_flags & ITEM_FLAG_STOPPRESSUREDAMAGE) && head && (head.item_flags & ITEM_FLAG_STOPPRESSUREDAMAGE)))
 			losebreath = max(losebreath+ 2, 3)
 			to_chat(src, "<span class='danger'>I'M BEING [pick("CRUSHED","DESTROYED","COMPRESSED","PULPED")] LIKE A FUCKING CAN!!!</span>")
 			adjustBruteLoss(25)

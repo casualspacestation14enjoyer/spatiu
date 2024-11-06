@@ -441,13 +441,14 @@
 
 // spreadable water
 
-/obj/effect/sevenwater // TODO: MAKE THIS SHIT FUCKING WORK!!!
+/obj/effect/sevenwater
 	name = "water"
 	desc = "Salty."
 	icon = 'icons/obj/warfare.dmi'
 	icon_state = "trench_full"
 	plane = ABOVE_HUMAN_PLANE
 	layer = ABOVE_HUMAN_LAYER
+	mouse_opacity = 0
 	density = FALSE
 	anchored = TRUE
 
@@ -463,26 +464,30 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/effect/sevenwater/proc/getdirections()
-    var/list/adjacent = list()
+	var/list/adjacent = list()
 
-    // Directions to check (north, south, east, west)
-    for(var/dir in list(NORTH,SOUTH,EAST,WEST,DOWN))
-        var/turf/T = get_step(src, dir)
-        if(T)
-            adjacent += T
+	for(var/dir in list(NORTH,SOUTH,EAST,WEST,DOWN))
+		var/turf/T = get_step(src, dir)
+		if(T)
+			adjacent += T
 
-    return adjacent
+	return adjacent
 
 /obj/effect/sevenwater/Process()
 	spawn(5)
 		for(var/turf/C in getdirections()) // Get it? C? Like sea? Haha. Kill me.
 			var/obj/effect/sevenwater/SW = locate() in C
-			if(C.density)
-				continue
+			var/obj/structure/window/FUCKME = locate() in C
 			if(SW)
+				continue
+			if(FUCKME)
+				continue
+			if(C.density)
 				continue
 			else
 				if(locate(/obj/structure/sevendrain) in C) // No flooding allowed!
+					break
+				if(locate(/obj/structure/window) in C)
 					break
 				new /obj/effect/sevenwater(C)
 
