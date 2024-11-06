@@ -37,16 +37,18 @@
 /obj/item/gun/projectile/revolver/cpt/kapitain
 	name = "CZ 75-R"
 	desc = "The civilian version of the vz. 75-RM."
+	icon = 'icons/obj/newguns.dmi'
+	icon_state = "revolver2"
 
 /obj/item/clothing/under/kapitain
 	name = "Kapitain Uniform"
-	desc = ""
+	desc = "You don't want to wear it but you want to look you have any authority."
 	icon_state = "capuniform"
 	worn_state = "capuniform"
 
 /obj/item/clothing/suit/kapitain
 	name = "Kapitain Jacket"
-	desc = ""
+	desc = "A jacket for the Kapitain. It looks fancy. It looks."
 	icon_state = "capcoat"
 	item_state = "capcoat"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
