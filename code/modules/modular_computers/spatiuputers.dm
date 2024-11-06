@@ -139,6 +139,14 @@
 				executefromdisk = TRUE
 			else
 				sendmessage(":F drive is null",H)
+		if("eject")
+			sleep(3)
+			if(disk)
+				sendmessage("Eject complete",H)
+				disk.forceMove(src.loc)
+				disk = null
+			else
+				sendmessage(":F drive is null",H)
 		if("logs","showlogs","probe","probe.exe")
 			sleep(3)
 			playsound(src, 'sound/effects/computer/bootup.ogg', 60)
