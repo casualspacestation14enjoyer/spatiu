@@ -14,13 +14,13 @@
 	if(locked)
 		return
 	if(density) // CLOSED
-		flick("[base_icon]-opening",src)
-		//icon_state = "[base_icon]-open"
+		flick("[base_icon]_opening",src)
+		icon_state = "[base_icon]_open"
 		density = FALSE
 		playsound(src, opening_sound, 60)
 	else
-		flick("[base_icon]-closing",src)
-		//icon_state = "[base_icon]-closed"
+		flick("[base_icon]_closing",src)
+		icon_state = "[base_icon]_closed"
 		density = TRUE
 		playsound(src, closing_sound, 60)
 
