@@ -162,7 +162,7 @@ var/list/flooring_types
 
 /decl/flooring/wood/poo
 	icon = 'icons/life/floors.dmi'
-	icon_state = "F6"
+	icon_base = "F6"
 
 /decl/flooring/reinforced
 	name = "reinforced floor"
@@ -179,7 +179,7 @@ var/list/flooring_types
 
 /decl/flooring/reinforced/grimshart
 	icon = 'icons/life/floors.dmi'
-	icon_state = "23"
+	icon_base = "23"
 
 /decl/flooring/reinforced/circuit
 	name = "processing strata"
