@@ -453,7 +453,7 @@
 	anchored = TRUE
 
 /obj/effect/sevenwater/ocean
-	icon_state = "waterfullblock"
+	icon_state = "trench_full"
 
 /obj/effect/sevenwater/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -477,13 +477,7 @@
 	spawn(5)
 		for(var/turf/C in getdirections()) // Get it? C? Like sea? Haha. Kill me.
 			var/obj/effect/sevenwater/SW = locate() in C
-			var/obj/structure/window/FUCKME = locate() in C
-			var/obj/structure/spatiudoor/SD = locate() in C
 			if(SW)
-				continue
-			if(FUCKME)
-				continue
-			if(SD.density)
 				continue
 			if(C.density)
 				continue
@@ -491,10 +485,9 @@
 				if(locate(/obj/structure/sevendrain) in C) // No flooding allowed!
 					break
 				if(locate(/obj/structure/window) in C)
-					break
+					continue
 				if(locate(/obj/structure/spatiudoor) in C)
-					if(SD.density)
-						break
+					continue
 				new /obj/effect/sevenwater(C)
 
 /obj/structure/sevendrain

@@ -557,7 +557,7 @@
 
 	brightness_range = 5	// luminosity when on, also used in power calculation
 	brightness_power = 4
-	brightness_color = "#B2B2B2"//"#FAE1AF"//"#C5D8B3"//#CDFEE0
+	brightness_color = "#cda656"//"#C5D8B3"//#CDFEE0
 	lighting_modes = list(
 		LIGHTMODE_EMERGENCY = list(l_range = 4, l_power = 1, l_color = "#da0205"),
 		)

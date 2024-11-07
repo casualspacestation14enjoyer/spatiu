@@ -90,6 +90,11 @@
 	icon_state = "wood"
 	initial_flooring = /decl/flooring/wood
 
+/turf/simulated/floor/wood/grimshart
+	initial_flooring = /decl/flooring/wood/poo
+	icon = 'icons/life/floors.dmi'
+	icon_state = "F6"
+
 /turf/simulated/floor/grass
 	name = "grass patch"
 	icon = 'icons/turf/flooring/grass.dmi'
@@ -148,6 +153,11 @@
 	icon = 'icons/turf/flooring/tiles.dmi'
 	icon_state = "reinforced"
 	initial_flooring = /decl/flooring/reinforced
+
+/turf/simulated/floor/reinforced/grimshart
+	icon = 'icons/life/floors.dmi'
+	icon_state = "23"
+	initial_flooring = /decl/flooring/reinforced/grimshart
 
 /turf/simulated/floor/reinforced/airless
 	initial_gas = null

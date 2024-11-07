@@ -160,6 +160,10 @@ var/list/flooring_types
 	build_type = /obj/item/stack/tile/wood
 	flags = TURF_CAN_BREAK | TURF_IS_FRAGILE | TURF_REMOVE_SCREWDRIVER
 
+/decl/flooring/wood/poo
+	icon = 'icons/life/floors.dmi'
+	icon_state = "F6"
+
 /decl/flooring/reinforced
 	name = "reinforced floor"
 	desc = "Heavily reinforced with steel plating."
@@ -172,6 +176,10 @@ var/list/flooring_types
 	apply_thermal_conductivity = 0.025
 	apply_heat_capacity = 325000
 	can_paint = 1
+
+/decl/flooring/reinforced/grimshart
+	icon = 'icons/life/floors.dmi'
+	icon_state = "23"
 
 /decl/flooring/reinforced/circuit
 	name = "processing strata"
