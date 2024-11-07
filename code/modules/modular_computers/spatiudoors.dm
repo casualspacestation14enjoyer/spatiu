@@ -54,5 +54,5 @@
 	icon_state = "manual_closed"
 	base_icon = "manual"
 	timetopen = 0
-	opening_sound = 'sound/effects/doorcreaky.ogg'
+	opening_sound = 'sound/effects/doorpen.ogg'
 	closing_sound = 'sound/effects/doorcreaky.ogg'
