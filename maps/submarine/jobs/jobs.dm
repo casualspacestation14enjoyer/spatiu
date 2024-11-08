@@ -40,7 +40,7 @@
 	department_flag = COM
 	req_admin_notify = TRUE
 	total_positions = 1
-	social_class = SOCIAL_CLASS_MAX
+	social_class = SOCIAL_CLASS_HIGH
 	outfit_type = /decl/hierarchy/outfit/job/spatiu/marshal
 
 	//Baseline skill defines
@@ -55,3 +55,26 @@
 		H.add_stats(rand(17,20), 10, 9)
 		H.fully_replace_character_name("Mar. [H.real_name]")
 		H.set_quirk(pick(/datum/quirk/dead_inside,/datum/quirk/tough))
+
+/datum/job/spatiu/logisticsofficer
+	title = "Logistics Officer"
+	lore = "You're the cook, janitor and courier of this god-forsaken outpost. You don't want to be here, and you won't be if you're not useful; just not at the place you want to be. Which will be the ocean."
+	department = "Filth"
+	department_flag = CIV
+	total_positions = 1
+	outfit_type = /decl/hierarchy/outfit/job/spatiu/logisticsofficer
+
+	//Baseline skill defines
+	medical_skill = 3
+	surgery_skill = 4
+	ranged_skill = 4
+	melee_skill = 5
+
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.voice_in_head(pick(GLOB.lone_thoughts))
+		to_chat(H, "<b>Password</b>: [GLOB.cook_password]")
+		H.mind.store_memory("<b>Password</b>: [GLOB.cook_password]")
+		H.add_stats(rand(12,15), rand(12,16), rand(12,14))
+		H.fully_replace_character_name("LoF. [H.real_name]")
+		H.assign_random_quirk()

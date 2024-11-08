@@ -113,6 +113,7 @@ var/list/admin_verbs_sounds = list(
 
 var/list/admin_verbs_fun = list(
 	/client/proc/object_talk,
+	/client/proc/show_passwords,
 	/datum/admins/proc/cmd_admin_dress,
 	/client/proc/cmd_admin_gib_self,
 	/client/proc/drop_bomb,
@@ -254,6 +255,7 @@ var/list/admin_verbs_hideable = list(
 	/client/proc/play_sound,
 	/client/proc/play_server_sound,
 	/client/proc/object_talk,
+	/client/proc/show_passwords,
 	/datum/admins/proc/cmd_admin_dress,
 	/client/proc/cmd_admin_gib_self,
 	/client/proc/drop_bomb,
@@ -643,6 +645,11 @@ var/list/admin_verbs_mentor = list(
 	else
 		usr.PushClickHandler(/datum/click_handler/build_mode)
 	feedback_add_details("admin_verb","TBMS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/proc/show_passwords()
+	set category = "Special Verbs"
+	set name = "Passwords"
+	to_chat(src, "cargo pass: [GLOB.cargo_password] --- food pass: [GLOB.cook_password]")
 
 /client/proc/object_talk(var/msg as text) // -- TLE
 	set category = "Special Verbs"

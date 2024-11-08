@@ -3363,7 +3363,7 @@
 	return ..()
 
 /obj/item/reagent_containers/food/snacks/warfare/attackby(obj/item/W, mob/user)
-	if(istype(W,/obj/item/material/sword/combat_knife))
+	if(istype(W,/obj/item/material/sword/combat_knife) || istype(W,/obj/item/material/kitchen/utensil))
 		open(user)
 		update_icon()
 
@@ -3391,7 +3391,7 @@
 	open_can_icon = "pisssardine_open"
 	desc = "A can of the only sort of fish that could live in these waters."
 	trash = /obj/item/trash/warfare_can/sardine
-	
+
 /obj/item/reagent_containers/food/snacks/warfare/milk
 	name = "\improper canned roachmilk"
 	icon_state = "cmilk"

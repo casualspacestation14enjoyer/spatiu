@@ -1,3 +1,4 @@
+"aw" = (/obj/structure/closet/cabinet{pixel_x = -3},/turf/simulated/floor/tiled/dark,/area/centcom)
 "aG" = (/obj/structure/spatiudoor,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "bt" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small{dir = 1},/turf/simulated/floor/tiled,/area/centcom)
 "bD" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/fluff/processor,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
@@ -26,7 +27,7 @@
 "iH" = (/obj/structure/toilet{pixel_y = 21},/obj/machinery/light/small{dir = 2},/turf/simulated/floor/tiled,/area/centcom)
 "iI" = (/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "iV" = (/obj/machinery/light,/turf/simulated/floor/wood/grimshart,/area/centcom)
-"jh" = (/obj/effect/decal/cleanable/dirt,/obj/structure/fluff/processor,/obj/machinery/light/small{dir = 1},/turf/simulated/floor/reinforced/grimshart,/area/centcom)
+"jh" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small{dir = 1},/obj/structure/fluff/controller,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "jN" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/centcom)
 "jY" = (/obj/effect/decal/cleanable/dirt,/obj/structure/fluff/fakeplace{icon = 'icons/life/LFWB_USEFUL.dmi'; pixel_x = 31; pixel_y = -6},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "ke" = (/obj/machinery/light{dir = 8},/obj/machinery/kaos/spatiuputer/compdesk,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
@@ -87,6 +88,7 @@
 "BC" = (/obj/structure/sevendrain,/obj/structure/spatiudoor,/turf/simulated/floor/tiled/dark,/area/centcom)
 "BR" = (/obj/structure/spatiudoor/manual,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/centcom)
 "Ci" = (/obj/structure/bed,/obj/effect/decal/cleanable/dirt,/obj/effect/landmark/start/marshal,/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/wood/grimshart,/area/centcom)
+"Ck" = (/obj/structure/closet/cabinet{pixel_x = 3},/turf/simulated/floor/tiled/dark,/area/centcom)
 "Cn" = (/obj/machinery/sleeper{dir = 4},/turf/simulated/floor/tiled/dark,/area/centcom)
 "Cp" = (/obj/structure/fluff/strangelight,/turf/simulated/floor/tiled/dark,/area/centcom)
 "CA" = (/obj/machinery/light{dir = 1},/obj/effect/decal/cleanable/generic,/turf/simulated/floor/tiled/dark,/area/centcom)
@@ -242,7 +244,7 @@ OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLlEFHFHFHFHlEOLOXOLzROLOLOLOLOLOLOLOLOLOXfnFHFHfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLCpBAFHFHBACpOLOXOLfbhueBfbhueBvTSPOOOLfnfnmOiAfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLlEFHkBFHFHlEOLOXOLfbUdUdfbUdUdfbfbfbEmFHFHFHFHfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLFHFHFHFHFHFHOLOXOLIgeBeBfbeBeBfbfbfbEmFHFHFHFHfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLawFHFHFHFHCkOLOXOLIgeBeBfbeBeBfbfbfbEmFHFHFHFHfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLaGOLaGOLOLOLOXOLfbUdUdiVUdUdfbiVgPOLfnfnfnfnfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLDbOLIiOLOXOXOXOLOLfnfnOLfnfnOLOLOLOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLaGOLaGOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX

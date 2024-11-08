@@ -103,3 +103,19 @@ GLOBAL_LIST_INIT(lone_thoughts, list(
 /obj/item/clothing/suit/armor/marshal/New()
 	..()
 	slowdown_per_slot[slot_wear_suit] = 1
+
+/decl/hierarchy/outfit/job/spatiu/logisticsofficer
+	name = OUTFIT_JOB_NAME("Logistics Officer")
+	head = /obj/item/clothing/head/soft
+	uniform = /obj/item/clothing/under/logisticsofficer
+	glasses = /obj/item/clothing/glasses/sunglasses
+	shoes = /obj/item/clothing/shoes/brown
+	l_pocket = /obj/item/coupon
+	belt = /obj/item/clipboard
+
+/obj/item/clothing/under/logisticsofficer
+	name = "Logistics Officer Uniform"
+	desc = "Despite the fancy name, you still look like what you are."
+	icon_state = "qm"
+	item_state = "lb_suit"
+	worn_state = "qm"

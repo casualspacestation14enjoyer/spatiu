@@ -298,7 +298,7 @@
 					return
 				playsound(PC, "keyboardlong", 40)
 				PC.sendmessage(">[print]",H)
-				if(print == GLOB.cargo_password)
+				if(print == GLOB.cook_password)
 					sleep(4)
 					PC.sendmessage("Authorized.",H)
 					authed = TRUE
@@ -403,9 +403,10 @@
 			if(!authed)
 				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
 				return
-			new /obj/item/coupon(PC.loc)
 			playsound(PC, 'sound/spatiu/print.ogg', 60)
-			PC.sendmessage("PRINTING FOOD STAMP. YOU ARE IN EMERGENCY RESPONSE MODE, REMEMBER THAT THIS IS FOR RATIONING.")
+			PC.sendmessage("PRINTING FOOD STAMP. YOU ARE IN EMERGENCY RESPONSE MODE, REMEMBER THAT THIS IS FOR RATIONING.",H)
+			sleep(2 SECONDS)
+			new /obj/item/coupon(PC.loc)
 		if("announce")
 			sleep(3)
 			if(!authed)

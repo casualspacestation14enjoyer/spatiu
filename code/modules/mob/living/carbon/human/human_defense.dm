@@ -669,6 +669,7 @@ meteor_act
 //We crit failed, let's see what happens to us.
 /mob/living/proc/resolve_critical_miss(var/obj/item/I)
 	var/result = rand(1,3)
+	return
 
 	if(!I)
 		visible_message("<span class='interface'>[src] punches themself in the face!</span>")
