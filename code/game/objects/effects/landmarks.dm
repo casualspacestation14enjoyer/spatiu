@@ -90,6 +90,24 @@
 	tag = "start*[name]"
 	return 1
 
+/obj/effect/landmark/start/kapitain
+	name = "Kapitain"
+
+/obj/effect/landmark/start/marshal
+	name = "Marshal"
+
+/obj/effect/landmark/start/maintoff
+	name = "Maintenance Officer"
+
+/obj/effect/landmark/start/medoff
+	name = "Medical Officer"
+
+/obj/effect/landmark/start/logoff
+	name = "Logistics Officer"
+
+/obj/effect/landmark/start/cadet
+	name = "Cadet"
+
 /obj/effect/landmark/start/assistant
 	name = "Assistant"
 /obj/effect/landmark/start/botanic
@@ -146,8 +164,6 @@
 	name = "Arbiter"
 /obj/effect/landmark/start/cargo_kid
 	name ="Cargo Kid"
-/obj/effect/landmark/start/cadet
-	name = "Cadet"
 /obj/effect/landmark/start/heir
 	name = "Heir"
 

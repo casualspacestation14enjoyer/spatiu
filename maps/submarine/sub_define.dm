@@ -9,13 +9,14 @@
 	boss_short    = "CMA"
 	company_name  = "Colonial Magistrate Space Residential Complex"
 	company_short = "CMSRC"
-	system_name = "Edegol-3b"
+	system_name = "Edegol"
 
 	lobby_icon = 'maps/oldfare/fullscreen.dmi'
 	lobby_screens = list("lobby1","lobby2","lobby3","lobby4","lobby5", "lobby6")
 
 	allowed_jobs = list(
-		/datum/job/kapitain
+		/datum/job/spatiu/kapitain,
+		/datum/job/spatiu/marshal
 	)
 
 	station_levels = list(1,2)
@@ -33,10 +34,6 @@
 	emergency_shuttle_called_message = "An emergency escape shuttle has been sent."
 	emergency_shuttle_recall_message = "The emergency shuttle has been recalled"
 	map_lore = "Underwater."
-
-	allowed_jobs = list(
-		/datum/job/kapitain
-	)
 
 //Overriding event containers to remove random events.
 /datum/event_container/mundane

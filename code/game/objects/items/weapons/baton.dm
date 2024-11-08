@@ -43,6 +43,10 @@
 	force = 25 //These things pack a punch.
 	block_chance = 25
 
+/obj/item/melee/classic_baton/trench_club/novelty
+	name = "antique club"
+	desc = "A truncheon used for beating other people, this one seems to be ancient. Perhaps a family trinket of the Marshal."
+
 /obj/item/melee/classic_baton/trench_club/New()
 	..()
 	icon_state = "trench_club[rand(1,3)]"

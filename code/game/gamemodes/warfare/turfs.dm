@@ -477,7 +477,10 @@
 	spawn(5)
 		for(var/turf/C in getdirections()) // Get it? C? Like sea? Haha. Kill me.
 			var/obj/effect/sevenwater/SW = locate() in C
+			var/obj/machinery/door/blast/B = locate() in C
 			if(SW)
+				continue
+			if(B.density)
 				continue
 			if(C.density)
 				continue

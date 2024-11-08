@@ -9,12 +9,15 @@
 	var/access_requirement = 0
 	var/locked = FALSE
 	var/doing = FALSE
+	var/opaqa = TRUE
 	var/timetopen = 40
 	var/opening_sound = 'sound/machines/airlock_open_force.ogg'
 	var/closing_sound = 'sound/machines/airlock_close_force.ogg'
 	var/deny_sound = 'sound/machines/airlock.ogg'
 
 /obj/structure/spatiudoor/RightClick(mob/living/user)
+	if(!CanPhysicallyInteract(user))
+		return
 	if(locked)
 		playsound(src, deny_sound, 60)
 		return
@@ -29,14 +32,16 @@
 		icon_state = "[base_icon]_open"
 		doing = TRUE
 		density = FALSE
-		opacity = FALSE
+		if(opaqa)
+			opacity = FALSE
 		playsound(src, opening_sound, 60)
 	else
 		flick("[base_icon]_closing",src)
 		icon_state = "[base_icon]_closed"
 		doing = TRUE
 		density = TRUE
-		opacity = TRUE
+		if(opaqa)
+			opacity = TRUE
 		playsound(src, closing_sound, 60)
 	spawn(3 SECONDS)
 		doing = FALSE
@@ -56,3 +61,17 @@
 	timetopen = 0
 	opening_sound = 'sound/effects/doorpen.ogg'
 	closing_sound = 'sound/effects/doorcreaky.ogg'
+
+/obj/structure/spatiudoor/medical
+	name = "door"
+	icon_state = "meddoor_closed"
+	base_icon = "meddoor"
+	timetopen = 0
+	opening_sound = 'sound/machines/airlock_open.ogg'
+	closing_sound = 'sound/machines/airlock_close.ogg'
+
+/obj/structure/spatiudoor/medical/glass
+	icon_state = "g-meddoor_closed"
+	base_icon = "g-meddoor"
+	opaqa = FALSE
+	opacity = FALSE

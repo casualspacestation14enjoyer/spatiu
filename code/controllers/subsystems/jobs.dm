@@ -419,14 +419,9 @@ SUBSYSTEM_DEF(jobs)
 	if(job.role_desc)
 		to_chat(H, "<b>Role Description:</b> <i>[job.role_desc]</i>")
 
-	if(job.supervisors)
-		to_chat(H, "<b>As the [alt_title ? alt_title : rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
-
-	to_chat(H, "<b>To speak on your squad's radio channel use :h. For the use of other channels, examine your headset. For general use, use ;.</b>")
-
 	if(job.req_admin_notify)
-		to_chat(H, "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>")
-
+		to_chat(H, "<b>You are playing an important role.</b>")
+	to_chat(H, "<i>[job.lore]</i>")
 
 	if(job.has_email)
 		// EMAIL GENERATION

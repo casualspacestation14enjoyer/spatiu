@@ -4,6 +4,7 @@ GLOBAL_LIST_EMPTY(family_blacklist)
 
 	//The name of the job
 	var/title = "NOPE"
+	var/lore = "Fuck this, man!"
 	//Job access. The use of minimal_access or access is determined by a config setting: config.jobs_have_minimal_access
 	var/list/minimal_access = list()      // Useful for servers which prefer to only have access given to the places a job absolutely needs (Larger server population)
 	var/list/access = list()              // Useful for servers which either have fewer players, so each person needs to fill more than one role, or servers which like to give more access, so players can't hide forever in their super secure departments (I'm looking at you, chemistry!)
@@ -58,13 +59,13 @@ GLOBAL_LIST_EMPTY(family_blacklist)
 	var/engineering_skill = 5
 	var/melee_skill = 5
 	//Gun skills
-	var/auto_rifle_skill = 5
-	var/semi_rifle_skill = 5
-	var/sniper_skill = 5
-	var/shotgun_skill = 5
-	var/lmg_skill = 5
-	var/smg_skill = 5
-	var/boltie_skill = 5
+	var/auto_rifle_skill = 0
+	var/semi_rifle_skill = 0
+	var/sniper_skill = 0
+	var/shotgun_skill = 0
+	var/lmg_skill = 0
+	var/smg_skill = 0
+	var/boltie_skill = 0
 
 
 /datum/job/New()

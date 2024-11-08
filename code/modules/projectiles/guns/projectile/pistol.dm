@@ -163,6 +163,17 @@
 	allowed_magazines = /obj/item/ammo_magazine/mc9mm
 	condition = 75
 
+/obj/item/gun/projectile/pistol/marshal
+	name = "FB VIS 101"
+	desc = "Gówniana polska broń, która niestety nie została jeszcze całkowicie wycofana z uniwersum. It smells like body odor and old pennies."
+	icon = 'icons/obj/newguns.dmi'
+	icon_state = "pisstol"
+	caliber = ".45"
+	condition = 29
+	magazine_type = /obj/item/ammo_magazine/c45m/warfare
+	allowed_magazines = /obj/item/ammo_magazine/c45m/warfare
+	can_jam = TRUE
+
 /obj/item/gun/projectile/pistol/flash
 	name = "holdout signal pistol"
 	magazine_type = /obj/item/ammo_magazine/mc9mm/flash
@@ -198,9 +209,7 @@
 /obj/item/gun/projectile/pistol/update_icon()
 	..()
 	if(silenced)
-		icon_state = "pistol-silencer"
-	else
-		icon_state = "pistol"
+		icon_state = "[icon_state]-silencer"
 	if(!(ammo_magazine && ammo_magazine.stored_ammo.len))
 		icon_state = "[icon_state]-e"
 

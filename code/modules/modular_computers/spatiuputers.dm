@@ -17,11 +17,14 @@
 	playsound(src, "button", 60)
 	sleep(4)
 	playsound(src, 'sound/effects/computer/bootup.ogg', 60)
+	sleep(3 SECONDS)
 	on = TRUE
 	update_icon()
 
 /obj/machinery/kaos/spatiuputer/RightClick(mob/living/user)
 	if(user.incapacitated(INCAPACITATION_STUNNED|INCAPACITATION_RESTRAINED|INCAPACITATION_KNOCKOUT))
+		return
+	if(!CanPhysicallyInteract(user))
 		return
 	if(!on)
 		return
@@ -259,6 +262,112 @@
 			PC.sendmessage("SCRUNGUS ACTIVATED.",H)
 			for(var/i=0, i<10, i++)
 				PC.sendmessage("SCRUNGUS NUMBER [i]",H)
+		if("stopexec","stopexecutefromdisk","execfrompc")
+			sleep(3)
+			PC.sendmessage("Executing from disk is now disabled.",H)
+			PC.executefromdisk = FALSE
+		else
+			sleep(5)
+			PC.sendmessage("Unknown Command",H)
+
+/obj/item/floppy/communicator
+	writtenon = "major-sys intercommunicator"
+	var/authed = FALSE
+	icon_state = "floppy2"
+
+/obj/item/floppy/communicator/processcommand(command, mob/living/carbon/human/H, obj/machinery/kaos/spatiuputer/PC)
+	if(!command || !H || !PC)
+		return
+	switch(command)
+		if("auth","login","authorize","superuser","su")
+			sleep(5)
+			if(!authed)
+				PC.sendmessage("Login Request",H)
+				sleep(2)
+				PC.sendmessage("------------",H)
+				sleep(5)
+				PC.sendmessage("MAJOR SYSTEM INTERCOMMUNICATOR PROGRAM",H)
+				sleep(2)
+				PC.sendmessage("Please insert credentials",H)
+				sleep(1)
+				PC.sendmessage("Now accepting input.",H)
+				var/print = input(H, "Command Prompt", PC.name)
+				if(!print)
+					sleep(10)
+					PC.sendmessage("Error 204",H)
+					return
+				playsound(PC, "keyboardlong", 40)
+				PC.sendmessage(">[print]",H)
+				if(print == GLOB.cargo_password)
+					sleep(4)
+					PC.sendmessage("Authorized.",H)
+					authed = TRUE
+				else
+					sleep(10)
+					PC.sendmessage("Error 401",H)
+					return
+			else
+				PC.sendmessage("Login Request",H)
+				sleep(2)
+				PC.sendmessage("------------",H)
+				sleep(5)
+				PC.sendmessage("MAJOR SYSTEM INTERCOMMUNICATOR PROGRAM",H)
+				sleep(2)
+				PC.sendmessage("You are already authorized.",H)
+		if("logoff","unauth")
+			sleep(3)
+			if(authed)
+				authed = FALSE
+				PC.sendmessage("You have been logged off.",H)
+			else
+				PC.sendmessage("You are not logged in!",H)
+		if("announce")
+			sleep(3)
+			if(!authed)
+				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
+				return
+			PC.sendmessage("Now accepting input.",H)
+			var/print = input(H, "Command Prompt", PC.name)
+			if(!print)
+				sleep(10)
+				PC.sendmessage("Error 204",H)
+				return
+			playsound(PC, "keyboardlong", 40)
+			sleep(5)
+			PC.sendmessage("INPUT ACCEPTED, VOICE MODULATOR STARTING...", H)
+			sleep(10)
+			PC.sendmessage("Modulated. Playback activated",H)
+			sleep(4)
+
+			// todo: make sure this is announced to only people inside the outpost
+			for(var/mob/M in GLOB.living_mob_list_)
+				to_chat(M, "<h1><span class='red_team'>The ancient intercom speakers scream to life and a [pick("cheaply modulated voice","booming artifical voice")] reverberates throughout the outpost!</span></h1>")
+				to_chat(M, "<h2>[print]</h2>")
+				sound_to(M, 'sound/spatiu/intercom.ogg')
+		if("doorctrl")
+			sleep(3)
+			if(!authed)
+				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
+				return
+			PC.sendmessage("Now accepting input.",H)
+			var/print = input(H, "Command Prompt", PC.name)
+			if(!print)
+				sleep(10)
+				PC.sendmessage("Error 204",H)
+				return
+			playsound(PC, "keyboardlong", 40)
+			sleep(5)
+			PC.sendmessage("Sending command...")
+			for(var/obj/machinery/door/blast/id_door/M in world)
+				if(M.id == print)
+					if(M.density)
+						spawn(0)
+							M.open()
+							return
+					else
+						spawn(0)
+							M.close()
+							return
 		if("stopexec","stopexecutefromdisk","execfrompc")
 			sleep(3)
 			PC.sendmessage("Executing from disk is now disabled.",H)

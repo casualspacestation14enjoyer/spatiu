@@ -2435,7 +2435,7 @@
 #include "maps\submarine\sub.dm"
 #include "maps\submarine\sub_define.dm"
 #include "maps\submarine\jobs\all_outfits.dm"
-#include "maps\submarine\jobs\commanders.dm"
+#include "maps\submarine\jobs\jobs.dm"
 #include "maps\~mapsystem\map_preferences.dm"
 #include "maps\~mapsystem\map_ranks.dm"
 #include "maps\~mapsystem\maps.dm"

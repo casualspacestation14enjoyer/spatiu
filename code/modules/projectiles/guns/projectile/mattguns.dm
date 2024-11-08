@@ -598,7 +598,7 @@
 
 
 /obj/item/ammo_magazine/c45m/warfare
-	name = "Reckoning magazine (.45)"
+	name = "magazine (.45)"
 	icon_state = "handgunmag"
 	mag_type = MAGAZINE
 	ammo_type = /obj/item/ammo_casing/c45
