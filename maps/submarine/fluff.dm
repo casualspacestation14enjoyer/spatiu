@@ -15,10 +15,28 @@
 	desc = "You don't know where it leads, what it does or why it's here."
 	icon = 'icons/life/LFWB_USEFUL.dmi'
 	icon_state = "cryolight"
+	anchored = TRUE
+	density = TRUE
 
 /obj/structure/fluff/strangelight/New()
 	. = ..()
 	set_light(6, 5, "#5b5752")
+
+/obj/structure/fluff/planetdisplay
+	name = "planet display"
+	desc = "This shows your intense situation."
+	icon = 'icons/life/LFWB_USEFUL_BIG.dmi'
+	icon_state = "planetdisplay"
+	anchored = TRUE
+	density = FALSE
+
+/obj/structure/fluff/antena
+	name = "antenna"
+	desc = "Functioning as intended. Sadly the satellite is fucked and not this."
+	icon = 'icons/life/LFWB_USEFUL.dmi'
+	icon_state = "antena2"
+	anchored = TRUE
+	density = TRUE
 
 /obj/structure/fluff/cryogenic
 	name = "sleep chamber"
