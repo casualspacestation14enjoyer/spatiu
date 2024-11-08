@@ -19,12 +19,12 @@
 	if(!CanPhysicallyInteract(user))
 		return
 	if(locked)
-		playsound(src, deny_sound, 60)
+		playsound(src, deny_sound, 100)
 		return
 	if(doing)
 		return
 	if(timetopen)
-		playsound(src, 'sound/machines/airlock_creaking.ogg', 40)
+		playsound(src, 'sound/machines/airlock_creaking.ogg', 100)
 		if(!do_after(user, timetopen, src, TRUE))
 			return
 	if(density) // CLOSED
@@ -34,7 +34,7 @@
 		density = FALSE
 		if(opaqa)
 			opacity = FALSE
-		playsound(src, opening_sound, 60)
+		playsound(src, opening_sound, 100)
 	else
 		flick("[base_icon]_closing",src)
 		icon_state = "[base_icon]_closed"
@@ -42,7 +42,7 @@
 		density = TRUE
 		if(opaqa)
 			opacity = TRUE
-		playsound(src, closing_sound, 60)
+		playsound(src, closing_sound, 100)
 	spawn(3 SECONDS)
 		doing = FALSE
 

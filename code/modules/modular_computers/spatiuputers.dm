@@ -272,7 +272,7 @@
 
 /obj/item/floppy/cooker
 	writtenon = "FUCKING FOOD THING"
-	var/authedd = FALSE
+	var/authed = FALSE
 	icon_state = "floppy3"
 
 /obj/item/floppy/cooker/processcommand(command, mob/living/carbon/human/H, obj/machinery/kaos/spatiuputer/PC)
@@ -326,7 +326,7 @@
 			if(!authed)
 				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
 				return
-			PC.sendmessage("There are [GLOB.food_cans] cans left",H)
+			PC.sendmessage("There are [global.food_cans] cans left",H)
 		if("disablefood")
 			sleep(3)
 			if(!authed)
@@ -344,7 +344,7 @@
 				sleep(2)
 				PC.sendmessage("Can found, sending to storage via pneumatic tube",H)
 				qdel(i)
-				GLOB.food_cans++
+				global.food_cans++
 			PC.sendmessage("All cans sent",H)
 
 /obj/item/floppy/communicator
@@ -398,6 +398,14 @@
 				PC.sendmessage("You have been logged off.",H)
 			else
 				PC.sendmessage("You are not logged in!",H)
+		if("foodstamp","printfoodstamp","printcoupon")
+			sleep(3)
+			if(!authed)
+				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
+				return
+			new /obj/item/coupon(PC.loc)
+			playsound(PC, 'sound/spatiu/print.ogg', 60)
+			PC.sendmessage("PRINTING FOOD STAMP. YOU ARE IN EMERGENCY RESPONSE MODE, REMEMBER THAT THIS IS FOR RATIONING.")
 		if("announce")
 			sleep(3)
 			if(!authed)

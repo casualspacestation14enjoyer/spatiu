@@ -106,10 +106,40 @@
 	else
 		return ..()
 
+/obj/item/coupon
+	name = "rationnaire stamp"
+	desc = "Eat, you've earned it."
+	icon = 'icons/obj/items.dmi'
+	icon_state = "spacecash1"
+	w_class = ITEM_SIZE_TINY
+
 /obj/structure/fluff/dispenser
 	name = "RDT-0"
 	desc = "Ration Dispenser Terminal - v0.3"
 	icon = 'icons/life/LFWB_USEFUL.dmi'
 	icon_state = "RCT0"
+	var/allowed = FALSE
 	anchored = TRUE
 	density = TRUE
+
+/obj/structure/fluff/dispenser/attackby(obj/item/O, mob/user)
+	if(istype(O, /obj/item/coupon))
+		playsound(src, 'sound/spatiu/print.ogg', 60)
+		qdel(O)
+		to_chat(user, "The machine eats up the coupon.")
+		sleep(2 SECONDS)
+		if(prob(98))
+			allowed = TRUE
+			to_chat(user, "The machine blinks green.")
+		else
+			to_chat(user, "...nothing happens.")
+
+/obj/structure/fluff/dispenser/attack_hand(mob/user)
+	if(!allowed)
+		playsound(src, 'sound/machines/airlock.ogg', 60)
+		return
+	if(global.food_cans > 0)
+		allowed = FALSE
+		global.food_cans--
+		new /obj/item/reagent_containers/food/snacks/warfare/sardine(loc)
+		playsound(src, 'sound/machines/vending_drop.ogg', 60)
