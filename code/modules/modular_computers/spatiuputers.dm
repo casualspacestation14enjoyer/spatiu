@@ -270,6 +270,83 @@
 			sleep(5)
 			PC.sendmessage("Unknown Command",H)
 
+/obj/item/floppy/cooker
+	writtenon = "FUCKING FOOD THING"
+	var/authedd = FALSE
+	icon_state = "floppy3"
+
+/obj/item/floppy/cooker/processcommand(command, mob/living/carbon/human/H, obj/machinery/kaos/spatiuputer/PC)
+	if(!command || !H || !PC)
+		return
+	switch(command)
+		if("auth","login","authorize","superuser","su")
+			sleep(5)
+			if(!authed)
+				PC.sendmessage("Login Request",H)
+				sleep(2)
+				PC.sendmessage("------------",H)
+				sleep(5)
+				PC.sendmessage("MAJOR SYSTEM INTERCOMMUNICATOR PROGRAM",H)
+				sleep(2)
+				PC.sendmessage("Please insert credentials",H)
+				sleep(1)
+				PC.sendmessage("Now accepting input.",H)
+				var/print = input(H, "Command Prompt", PC.name)
+				if(!print)
+					sleep(10)
+					PC.sendmessage("Error 204",H)
+					return
+				playsound(PC, "keyboardlong", 40)
+				PC.sendmessage(">[print]",H)
+				if(print == GLOB.cargo_password)
+					sleep(4)
+					PC.sendmessage("Authorized.",H)
+					authed = TRUE
+				else
+					sleep(10)
+					PC.sendmessage("Error 401",H)
+					return
+			else
+				PC.sendmessage("Login Request",H)
+				sleep(2)
+				PC.sendmessage("------------",H)
+				sleep(5)
+				PC.sendmessage("MAJOR SYSTEM INTERCOMMUNICATOR PROGRAM",H)
+				sleep(2)
+				PC.sendmessage("You are already authorized.",H)
+		if("logoff","unauth")
+			sleep(3)
+			if(authed)
+				authed = FALSE
+				PC.sendmessage("You have been logged off.",H)
+			else
+				PC.sendmessage("You are not logged in!",H)
+		if("checkfood","checkcans")
+			sleep(3)
+			if(!authed)
+				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
+				return
+			PC.sendmessage("There are [GLOB.food_cans] cans left",H)
+		if("disablefood")
+			sleep(3)
+			if(!authed)
+				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
+				return
+			PC.sendmessage("YOU CAN'T DO THAT")
+		if("addfood","senditoff")
+			sleep(3)
+			if(!authed)
+				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
+				return
+			PC.sendmessage("Activating protocol",H)
+			var/obj/structure/fluff/controller/C = locate() in world
+			for(var/i in C.loaded)
+				sleep(2)
+				PC.sendmessage("Can found, sending to storage via pneumatic tube",H)
+				qdel(i)
+				GLOB.food_cans++
+			PC.sendmessage("All cans sent",H)
+
 /obj/item/floppy/communicator
 	writtenon = "major-sys intercommunicator"
 	var/authed = FALSE

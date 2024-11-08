@@ -319,6 +319,8 @@
 			return global.church_name;
 		if("ckey_whitelist")
 			return global.ckey_whitelist;
+		if("food_cans")
+			return global.food_cans;
 		if("client_preference_stats_")
 			return global.client_preference_stats_;
 		if("client_repository")
@@ -1037,7 +1039,7 @@
 			return global.z_levels;
 		if("zone_blocked")
 			return global.zone_blocked;
-		
+
 /proc/writeglobal(which, newval)
 	switch(which)
 		if("ALL_ANTIGENS")
@@ -1358,6 +1360,8 @@
 			global.church_name=newval;
 		if("ckey_whitelist")
 			global.ckey_whitelist=newval;
+		if("food_cans")
+			global.food_cans=newval;
 		if("client_preference_stats_")
 			global.client_preference_stats_=newval;
 		if("client_repository")
@@ -2076,7 +2080,7 @@
 			global.z_levels=newval;
 		if("zone_blocked")
 			global.zone_blocked=newval;
-		
+
 /var/list/_all_globals=list(
 	"ALL_ANTIGENS",
 	"ANTAG_FREQS",
@@ -2237,6 +2241,7 @@
 	"chicken_count",
 	"church_name",
 	"ckey_whitelist",
+	"food_cans",
 	"client_preference_stats_",
 	"client_repository",
 	"combatlog",

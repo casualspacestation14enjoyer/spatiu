@@ -18,5 +18,7 @@ SUBSYSTEM_DEF(legacy_init)
 		syndicate_code_response = generate_code_phrase()
 	if(!GLOB.cargo_password)
 		GLOB.cargo_password = GenerateKey()
+	if(!GLOB.cook_password)
+		GLOB.cook_password = GenerateKey()
 
 	createRandomZlevel()	// probably slow, but I believe unused

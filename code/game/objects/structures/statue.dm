@@ -1,3 +1,12 @@
+/obj/structure/statue
+	name = "statue"
+	desc = "An incredibly lifelike marble carving."
+	icon = 'icons/obj/statue.dmi'
+	icon_state = "human_male"
+
+/obj/structure/statue/f
+	icon_state = "human_female"
+
 /obj/structure/statue/verina
 	name = "statue"
 	desc = "A statue of some ominous looking, robed, figure. There's barely a scratch on it."

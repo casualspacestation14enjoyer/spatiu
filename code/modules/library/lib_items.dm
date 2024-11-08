@@ -12,8 +12,8 @@
 
 /obj/structure/bookcase
 	name = "bookcase"
-	icon = 'icons/obj/library.dmi'
-	icon_state = "book-0"
+	icon = 'icons/life/LFWB_USEFUL.dmi'
+	icon_state = "bookcase-0"
 	anchored = 1
 	density = 1
 	opacity = 1
@@ -88,9 +88,9 @@
 
 /obj/structure/bookcase/update_icon()
 	if(contents.len < 5)
-		icon_state = "book-[contents.len]"
+		icon_state = "bookcase-1"
 	else
-		icon_state = "book-5"
+		icon_state = "bookcase-5"
 
 
 
