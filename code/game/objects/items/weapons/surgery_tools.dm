@@ -222,7 +222,7 @@
 	throwforce = 1.0
 
 /obj/item/FixOVein
-	name = "FixOVein"
+	name = "vascular recoupler"
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "fixovein"
 	force = 0

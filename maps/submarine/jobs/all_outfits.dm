@@ -119,3 +119,85 @@ GLOBAL_LIST_INIT(lone_thoughts, list(
 	icon_state = "qm"
 	item_state = "lb_suit"
 	worn_state = "qm"
+
+/decl/hierarchy/outfit/job/spatiu/medicalofficer
+	name = OUTFIT_JOB_NAME("Medical Officer")
+	uniform = /obj/item/clothing/under/medicalofficer
+	mask = /obj/item/clothing/mask/surgical
+	shoes = /obj/item/clothing/shoes/white
+	belt = /obj/item/storage/belt/medical/full
+
+/obj/item/clothing/under/medicalofficer
+	name = "Medical Officer Uniform"
+	desc = "Not to be stained by blood, yet."
+	icon_state = "medofuniform"
+	item_state = "w_suit"
+	item_state = "medofuniform"
+
+/obj/item/spatiudefib // I fucking hate the way bay defibs work.
+	name = "heart restarter"
+	desc = "A several decades outdated model, the best you can get down here."
+	icon = 'icons/life/device.dmi'
+	icon_state = "defib"
+	item_state = "defibunit"
+
+/obj/item/spatiudefib/attack(mob/living/M, mob/living/user, target_zone, special)
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+
+		if(target_zone == BP_CHEST)
+			playsound(get_turf(src), 'sound/machines/defib_charge.ogg', 50, 0)
+			if(!do_after(user, 3 SECONDS, H, TRUE))
+				return
+			if(H.stat != DEAD)
+				playsound(get_turf(src), 'sound/machines/defib_zap.ogg', 50, 0)
+				H.resuscitate()
+
+/decl/hierarchy/outfit/job/spatiu/cadet
+	name = OUTFIT_JOB_NAME("Cadet")
+	head = /obj/item/clothing/head/beret/cadet
+	uniform = /obj/item/clothing/under/child_jumpsuit/cadet
+	shoes = /obj/item/clothing/shoes/child_shoes
+
+/obj/item/clothing/under/child_jumpsuit/cadet
+	name = "Cadet Uniform"
+	desc = "It's so fucking ugly."
+	icon_state = "cadetuniform"
+
+/obj/item/clothing/head/beret/cadet
+	name = "cadet beret"
+	desc = "I don't get how you expect kids to wear this piece of shit."
+	icon_state = "beret_navy"
+
+/obj/item/clothing/head/helmet/divinghelm
+	name = "diving helmet"
+	desc = "Old, decrepit, ancient. All viable words to describe this junk, but it is at least one thing. Functional, and in some ways reliable."
+	icon_state = "waterhelm"
+	item_flags = ITEM_FLAG_STOPPRESSUREDAMAGE | ITEM_FLAG_THICKMATERIAL | ITEM_FLAG_AIRTIGHT
+	flags_inv = BLOCKHAIR
+	permeability_coefficient = 0
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 50)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
+	body_parts_covered = HEAD|FACE|EYES
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.9
+	center_of_mass = null
+	randpixel = 0
+
+/obj/item/clothing/suit/divingsuit
+	name = "diving suit"
+	desc = "Despite protecting you from the pressure and water, it does jackshit to protect you from lead poisoning."
+	icon_state = "watersuit"
+	w_class = ITEM_SIZE_LARGE//large item
+	gas_transfer_coefficient = 0
+	permeability_coefficient = 0
+	item_flags = ITEM_FLAG_STOPPRESSUREDAMAGE | ITEM_FLAG_THICKMATERIAL
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 50)
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
+	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.9
+	center_of_mass = null
+	randpixel = 0

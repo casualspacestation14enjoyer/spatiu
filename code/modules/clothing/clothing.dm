@@ -497,11 +497,9 @@ BLIND     // can't see anything
 	var/hanging = 0
 	blood_overlay_type = "maskblood"
 
-/obj/item/clothing/mask/New()
-	if(pull_mask)
-		action_button_name = "Adjust Mask"
-		verbs += /obj/item/clothing/mask/proc/adjust_mask
-	..()
+/obj/item/clothing/mask/RightClick(mob/living/user)
+	if(CanPhysicallyInteract(user))
+		adjust_mask(user)
 
 /obj/item/clothing/mask/update_clothing_icon()
 	if (ismob(src.loc))

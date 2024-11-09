@@ -1,4 +1,4 @@
-"aw" = (/obj/structure/closet/cabinet{pixel_x = -3},/obj/effect/floor_decal/industrial/warning_white,/turf/simulated/floor/tiled/dark,/area/centcom)
+"aw" = (/obj/structure/closet/cabinet{pixel_x = -3},/obj/effect/floor_decal/industrial/warning_white,/obj/item/clothing/suit/divingsuit,/obj/item/clothing/head/helmet/divinghelm,/turf/simulated/floor/tiled/dark,/area/centcom)
 "aG" = (/obj/structure/spatiudoor,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "bt" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small{dir = 1},/turf/simulated/floor/tiled,/area/centcom)
 "bD" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/fluff/processor,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
@@ -12,7 +12,7 @@
 "dB" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/tiled/dark,/area/centcom)
 "ey" = (/obj/effect/floor_decal/industrial/warning_white,/turf/simulated/floor/reinforced/grimshart,/area/space)
 "eB" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood/grimshart,/area/centcom)
-"eJ" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
+"eJ" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/sink{dir = 8},/turf/simulated/floor/tiled/dark,/area/centcom)
 "eQ" = (/obj/structure/table/steel,/obj/item/pen{pixel_y = -6; pixel_x = 3},/turf/simulated/floor/tiled/dark,/area/centcom)
 "eU" = (/obj/machinery/light{dir = 4},/obj/item/floppy,/obj/item/floppy,/obj/structure/closet/cabinet{name = "blank floppy disk storage"},/turf/simulated/floor/tiled/dark,/area/centcom)
 "fb" = (/turf/simulated/floor/wood/grimshart,/area/centcom)
@@ -38,13 +38,14 @@
 "ke" = (/obj/machinery/light{dir = 8},/obj/machinery/kaos/spatiuputer/compdesk,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "kl" = (/obj/structure/table/rack,/obj/item/storage/firstaid/adv,/obj/item/storage/firstaid/adv,/turf/simulated/floor/tiled/dark,/area/centcom)
 "km" = (/obj/effect/decal/cleanable/generic,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
-"kz" = (/obj/structure/bed/chair{dir = 1},/obj/effect/decal/cleanable/blood/splatter,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
+"kz" = (/obj/structure/bed/chair{dir = 1},/obj/effect/decal/cleanable/blood/splatter,/obj/machinery/light/small/emergency,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "kA" = (/obj/structure/sevendrain,/obj/structure/spatiudoor,/turf/simulated/floor/plating,/area/centcom)
 "kB" = (/obj/effect/landmark{name = "JoinLate"},/turf/simulated/floor/tiled/dark,/area/centcom)
 "kP" = (/obj/structure/fluff/antena,/obj/structure/cable{dir = 4},/obj/effect/floor_decal/industrial/hatch/red,/turf/simulated/floor/reinforced/grimshart,/area/space)
 "kZ" = (/obj/effect/decal/cleanable/generic,/obj/effect/decal/cleanable/dirt,/obj/structure/closet/cabinet{pixel_x = 3},/obj/item/melee/classic_baton/trench_club/novelty,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "lE" = (/obj/structure/fluff/cryogenic,/obj/effect/landmark/start/cadet,/turf/simulated/floor/tiled/dark,/area/centcom)
-"lK" = (/obj/structure/table/rack,/obj/item/storage/firstaid/adv,/obj/item/storage/firstaid/adv,/obj/item/storage/firstaid/adv,/turf/simulated/floor/tiled/dark,/area/centcom)
+"lK" = (/obj/structure/table/rack,/obj/item/storage/firstaid/toxin,/obj/item/storage/firstaid/toxin,/turf/simulated/floor/tiled/dark,/area/centcom)
+"lW" = (/obj/structure/statue,/turf/simulated/floor/tiled/dark,/area/centcom)
 "lZ" = (/obj/effect/decal/cleanable/generic,/obj/effect/decal/cleanable/dirt,/obj/structure/closet/cabinet,/obj/item/mop,/obj/item/reagent_containers/glass/bucket,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "mH" = (/obj/effect/decal/cleanable/dirt,/obj/structure/closet/cabinet{pixel_x = 3},/obj/item/stack/teeth,/obj/item/stack/teeth,/obj/item/stack/teeth,/obj/item/stack/teeth,/obj/item/stack/teeth,/obj/item/stack/teeth,/obj/item/stack/teeth,/obj/item/stack/teeth,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "mO" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled/dark,/area/centcom)
@@ -103,7 +104,7 @@
 "BC" = (/obj/structure/sevendrain,/obj/structure/spatiudoor,/turf/simulated/floor/tiled/dark,/area/centcom)
 "BR" = (/obj/structure/spatiudoor/manual,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/centcom)
 "Ci" = (/obj/structure/bed,/obj/effect/decal/cleanable/dirt,/obj/effect/landmark/start/marshal,/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/wood/grimshart,/area/centcom)
-"Ck" = (/obj/structure/closet/cabinet{pixel_x = 3},/obj/effect/floor_decal/industrial/warning_white,/turf/simulated/floor/tiled/dark,/area/centcom)
+"Ck" = (/obj/structure/closet/cabinet{pixel_x = 3},/obj/effect/floor_decal/industrial/warning_white,/obj/item/clothing/suit/divingsuit,/obj/item/clothing/head/helmet/divinghelm,/turf/simulated/floor/tiled/dark,/area/centcom)
 "Cn" = (/obj/machinery/sleeper{dir = 4},/turf/simulated/floor/tiled/dark,/area/centcom)
 "Cp" = (/obj/structure/fluff/strangelight,/turf/simulated/floor/tiled/dark,/area/centcom)
 "CA" = (/obj/machinery/light{dir = 1},/obj/effect/decal/cleanable/generic,/turf/simulated/floor/tiled/dark,/area/centcom)
@@ -123,7 +124,7 @@
 "Ha" = (/obj/effect/floor_decal/industrial/loading{dir = 4},/turf/simulated/floor/tiled/dark,/area/centcom)
 "He" = (/obj/structure/spatiudoor/manual,/turf/simulated/floor/tiled,/area/centcom)
 "HE" = (/obj/machinery/light/small/red{dir = 1},/turf/simulated/floor/tiled/dark,/area/centcom)
-"HI" = (/obj/structure/table/rack,/obj/item/storage/firstaid/toxin,/obj/item/storage/firstaid/toxin,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
+"HI" = (/obj/structure/table/rack,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/item/spatiudefib,/obj/item/spatiudefib,/turf/simulated/floor/tiled/dark,/area/centcom)
 "Ig" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "Ii" = (/obj/structure/sevendrain,/obj/machinery/light/small/red{dir = 4},/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "Is" = (/obj/machinery/door/blast/id_door{id = "iso1"},/turf/simulated/floor/tiled/dark,/area/centcom)
@@ -141,6 +142,7 @@
 "Ke" = (/obj/structure/spatiudoor/manual,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "Kp" = (/obj/structure/bed/chair/office/dark{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "Ks" = (/obj/structure/spatiudoor/manual,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
+"KW" = (/obj/structure/sink{pixel_y = 13},/turf/simulated/floor/tiled/dark,/area/centcom)
 "KX" = (/obj/effect/sevenwater,/mob/living/carbon/human/monkey,/turf/simulated/floor/tiled/dark,/area/centcom)
 "KY" = (/obj/effect/floor_decal/industrial/warning_white{dir = 1},/turf/simulated/floor/reinforced/grimshart,/area/space)
 "Lw" = (/obj/effect/decal/cleanable/dirt,/obj/item/floppy,/obj/item/floppy,/obj/structure/closet/cabinet{name = "blank floppy disk storage"},/turf/simulated/floor/tiled/dark,/area/centcom)
@@ -185,9 +187,8 @@
 "WK" = (/obj/effect/floor_decal/industrial/warning_white{dir = 9},/turf/simulated/floor/reinforced/grimshart,/area/space)
 "Xi" = (/obj/structure/cable{icon_state = "2-4"},/turf/simulated/floor/beach/sand/water,/area/space)
 "Xn" = (/obj/machinery/light{dir = 1},/obj/structure/table/steel,/obj/item/paper_bin{pixel_x = -4; pixel_y = 12},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
-"YP" = (/obj/structure/closet/cabinet,/obj/item/storage/belt/medical/full,/obj/item/storage/belt/medical/full,/obj/item/storage/firstaid/regular,/turf/simulated/floor/tiled/dark,/area/centcom)
+"YP" = (/obj/structure/closet/cabinet,/obj/item/storage/belt/medical/full,/obj/item/storage/belt/medical/full,/obj/item/storage/firstaid/regular,/obj/item/storage/firstaid/surgery,/obj/item/storage/firstaid/surgery,/obj/item/FixOVein,/obj/item/FixOVein,/turf/simulated/floor/tiled/dark,/area/centcom)
 "Zl" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/turf/simulated/floor/wood/grimshart,/area/centcom)
-"ZN" = (/obj/structure/table/rack,/obj/item/storage/firstaid/toxin,/turf/simulated/floor/tiled/dark,/area/centcom)
 
 (1,1,1) = {"
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
@@ -247,24 +248,24 @@ OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLOLQGOLOLOLOLOLOLOLOLOXOLxiAmAmUEFHJHFHUEhnFHLwOLiHOLFHFHFHFHFHwxFHFHFHFHOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLxtDJoqFHdnOLvSVKrpscCiOLOLOLOLOLOLOLOLqgOLOLOLOLOLOLHeOLFHFHFHFHFHyoFHFHFHFHOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLcEclFHBAxtBCsspLglqJzXOLJwJCbDjhlZOLFHFHFHOLbtsrcosryjOLmOiAOLOLOLOLOLOLFHFHOLOLOLOLOLOLOLOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLkAGQGQOLOLOLMDWfmHNNkZOLoPNaNakmOQOLFHFHFHOLQbjNQbyjcSOLFHFHOLOXOXOXOXOLFHFHOLnOIDnOfAVYspOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLucqyhpOLOXOLOLKeOLOLOLOLOLFMOLOLOLOLmOhniAOLBROLOLOLOLOLFHFHOLOLOLOLOXOLFHFHKsphphyUphPDyUOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLiIkzucOLOXOLFHFHFHCAFHFHFHFHwxFHFHFHFHFHFHFHFHFHwxFHAmFHFHAmVeFHFHOLOXOLmOiAOLWhyUyUigfAufOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLVcOLOLOXOLFHFHFHFHFHFHFHhnFHFHFHFHFHFHFHFHFHAmAmAmFHJrAmAmFHAmAmOLOXOLFHFHOLnOyUphyUphyUOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLOLKeOLOLOLOLMdMdMdOLFHFHFHOLOLOLOLOLOLOLFtOLOLOLOLOLOXOLFHFHOLCNfbyUOLOLKeOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLyuQPQJfbPAOLOXOLmOFHiAOLFHFHFHOLOXOXOXOLkllKAmFHdcFHLLOLOXOLFHFHOLyUphyUOLwzzjOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLUdyUyUsJjYOLOXOLMdMdMdOLOLpNOLOLOLOLOLOLAmAmAmAmdcFHVJOLOXOLFHFHOLnOnOtKOLOPMsOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLdvZlyUyUyHOLOXOLFHFHFHFHFHwxFHFHwxFHFHOLHIAmAmJjOLOLOLOLOXOLFHFHOLOLOLOLOLOLOLOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLMdMdOLOLOLOXOLmOFHFHFHFHFHFHFHFHFHiAOLZNpowVAmdcFHLLOLOXOLmOiAOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLkAGQGQOLOLOLMDWfmHNNkZOLoPNaNakmOQOLFHFHFHOLQbjNQbyjcSOLFHFHOLOXOXOXOXOLmOiAOLnOIDnOfAVYspOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLucqyhpOLOXOLOLKeOLOLOLOLOLFMOLOLOLOLmOhniAOLBROLOLOLOLOLFHFHOLOLOLOLOLOLFHFHKsphphyUphPDyUOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLiIkzucOLOXOLFHFHFHCAFHFHFHFHwxFHFHFHFHFHFHFHFHFHwxFHAmFHFHAmVeFHFHFHwxFHFHFHOLWhyUyUigfAufOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLVcOLOLOXOLFHFHFHFHFHFHFHhnFHFHFHFHFHFHFHFHFHAmAmAmFHJrAmAmFHAmAmFHyoFHFHFHOLnOyUphyUphyUOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLOLKeOLOLOLOLMdMdMdOLFHFHFHOLMdMdMdOLOLOLFtOLOLOLOLOLOLOLFHFHOLCNfbyUOLOLKeOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLyuQPQJfbPAOLOXOLmOlWiAOLFHFHFHOLmOlWiAOLlKklAmKWdcFHLLOLOXOLFHFHOLyUphyUOLwzzjOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLUdyUyUsJjYOLOXOLMdMdMdOLOLpNOLOLMdMdMdOLAmAmAmAmdcFHVJOLOXOLFHFHOLnOnOtKOLOPMsOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLdvZlyUyUyHOLOXOLFHFHFHFHFHwxFHFHFHFHFHOLHIAmAmJjOLOLOLOLOXOLFHFHOLOLOLOLOLOLOLOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLMdMdOLOLOLOXOLmOFHFHFHFHFHFHFHFHFHiAOLFHpowVAmdcFHLLOLOXOLmOiAOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLFHFHFHFHFHFHFHFHFHFHAmFtAmAmAmFHdcFHVJOLOXOLFHFHOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLmOFHFHFHFHFHFHFHFHFHRkOLYPdBAmFHOLOLOLOLOXOLFHFHOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLFHFHFHFHWxOLOLFHFHFHFHOLCnAmAmzoOLpYTpGQOXOLFHFHOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLmOFHFHFHFHFHFHFHFHFHiAOLFHdBFHdBOLeJugGQOXOLFHFHOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLFHFHFHFHFHFHFHFHFHFHFHOLxtFHdBAmqhJHEXGQOXOLmOiAOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLFHFHFHFHWxOLOLFHFHFHFHOLCnAmAmzoOLpYTpfnOXOLFHFHOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLmOFHFHFHFHFHFHFHFHFHiAOLFHdBFHdBOLeJugfnOXOLFHFHOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLFHFHFHFHFHFHFHFHFHFHFHOLxtFHdBAmqhJHEXfnOXOLmOiAOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLFHFHFHFHFHFHFHFHFHFHFHOLIsOLIyOLOLOLOLOLOXOLFHFHOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLmOFHFHFHFHFHFHFHFHFHiAOLxtOLDiOLOXOXOXOXOXOLBABAOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLFHFHyoFHFHyoFHFHyoFHFHOLDiOLxtOLOXOXOXOXOXfnFHFHfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLOLTnOLOLOLOLOLOLpNOLGQOLGQOLOXOXOXOXOXfnFHFHfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLOLTnOLOLOLOLOLOLpNOLfnOLfnOLOXOXOXOXOXfnFHFHfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLCpBAFHFHBACpOLOXOLHEOLOXOXOXOXOXOXOXOXOXfnFHFHfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLlEHaFHFHQnlEOLOXOLzROLOLOLOLOLOLOLOLOLOXfnFHFHfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLCpBAFHFHBACpOLOXOLfbhueBfbhueBvTSPOOOLfnfnmOiAfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX

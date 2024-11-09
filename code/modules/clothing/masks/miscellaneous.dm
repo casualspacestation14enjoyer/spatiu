@@ -28,8 +28,8 @@
 	..()
 
 /obj/item/clothing/mask/surgical
-	name = "sterile mask"
-	desc = "A sterile mask designed to help prevent the spread of diseases."
+	name = "doctor mask"
+	desc = "A blue mask preventing all that blood getting in your mouth and giving you AIDS-2."
 	icon_state = "sterile"
 	item_state = "sterile"
 	w_class = ITEM_SIZE_SMALL

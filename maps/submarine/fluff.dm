@@ -108,7 +108,7 @@
 
 /obj/structure/fluff/controller
 	name = "RCT-23"
-	desc = "Ration Control Terminal - v2.3"
+	desc = "Ration Control Terminal - v2.3. A useless piece of fucking technology that doesn't do anything by itself, you can't even send the food off without using the program."
 	icon = 'icons/life/LFWB_USEFUL.dmi'
 	icon_state = "RCT"
 	var/list/loaded = list()

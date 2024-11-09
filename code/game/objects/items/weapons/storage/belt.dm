@@ -104,6 +104,8 @@
 		/obj/item/clothing/gloves/latex,
 		/obj/item/reagent_containers/hypospray,
 		/obj/item/clothing/glasses/hud/health,
+		/obj/item/stack/medical/advanced/bruise_pack,
+		/obj/item/stack/medical/advanced/ointment,
 		/obj/item/crowbar,
 		/obj/item/device/flashlight,
 		/obj/item/taperoll,
@@ -121,8 +123,8 @@
 /obj/item/storage/belt/medical/full/New()
 	..()
 	new /obj/item/reagent_containers/hypospray/autoinjector/blood(src)
-	new /obj/item/reagent_containers/hypospray/autoinjector/revive(src)
-	new /obj/item/reagent_containers/hypospray/autoinjector/revive(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/morphine(src)
 	new /obj/item/reagent_containers/glass/ampule/morphine(src)
 	new /obj/item/suture(src)

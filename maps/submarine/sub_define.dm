@@ -17,7 +17,9 @@
 	allowed_jobs = list(
 		/datum/job/spatiu/kapitain,
 		/datum/job/spatiu/marshal,
-		/datum/job/spatiu/logisticsofficer
+		/datum/job/spatiu/logisticsofficer,
+		/datum/job/spatiu/medicalofficer,
+		/datum/job/spatiu/cadet
 	)
 
 	station_levels = list(1,2)
