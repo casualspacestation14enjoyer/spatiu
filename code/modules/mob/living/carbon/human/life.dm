@@ -130,6 +130,7 @@
 		if(!(wear_suit && (wear_suit.item_flags & ITEM_FLAG_STOPPRESSUREDAMAGE) && head && (head.item_flags & ITEM_FLAG_STOPPRESSUREDAMAGE)))
 			losebreath = max(losebreath+ 2, 3)
 			to_chat(src, "<span class='danger'>I'M BEING [pick("CRUSHED","DESTROYED","COMPRESSED","PULPED")] LIKE A FUCKING CAN!!!</span>")
+			bodytemperature -= T20C // this is stupid because edegol 3b is in the habitable zone, but we are completely at the bottom of the ocean so take it or leave it
 			adjustBruteLoss(25)
 			var/obj/item/organ/internal/lungs/sponge = internal_organs_by_name[BP_LUNGS]
 			if(sponge)

@@ -17,6 +17,32 @@
 	anchored = TRUE
 	density = TRUE
 
+/obj/structure/radiator
+	name = "radiator"
+	desc = "Keeps you warm."
+	icon_state = "radiator"
+	var/on = FALSE
+	anchored = TRUE
+	density = FALSE
+
+/obj/structure/radiator/Process()
+	if(!GLOB.reactoron)
+		on = FALSE
+		return
+	if(on)
+		var/datum/gas_mixture/env = loc.return_air()
+		if(!(env && abs(env.temperature - T20C) <= 0.1))
+			var/transfer_moles = 0.25 * env.total_moles
+			var/datum/gas_mixture/removed = env.remove(transfer_moles)
+
+			if(removed)
+				var/heat_transfer = removed.get_thermal_energy_change(T20C)
+				if(heat_transfer > 0)	//heating air
+					heat_transfer = min( heat_transfer, 40 KILOWATTS) //limit by the power rating of the heater
+
+					removed.add_thermal_energy(heat_transfer)
+			env.merge(removed)
+
 /obj/structure/capacitor
 	name = "electrical capacitor"
 	icon = 'icons/effects/96x96.dmi'
@@ -26,15 +52,50 @@
 	anchored = TRUE
 	density = TRUE
 
-/obj/machinery/power_generator
+/obj/machinery/heat_generator
 	name = "HECMHG-2991_V92"
-	desc = "Supply water to boil, so you don't freeze."
+	desc = "So you don't freeze."
 	icon = 'icons/obj/64x64.dmi'
 	icon_state = "reactor"
 	bound_width = 64
 	bound_height = 64
 	anchored = TRUE
 	density = TRUE
+	var/overheating = FALSE
+	var/overheat_stoptimer = 3000 // 5 mins
+	var/overheat_time = 0
+
+/obj/machinery/heat_generator/Initialize(mapload, d)
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
+/obj/machinery/heat_generator/proc/goboom()
+	if(overheating)
+		if(prob(99))
+			STOP_PROCESSING(SSobj, src)
+			qdel(src)
+
+/obj/machinery/heat_generator/Process()
+	if(GLOB.reactoron)
+		overheat_time++
+		icon_state = "reactor-active"
+	else
+		icon_state = "reactor"
+
+	if(overheat_time >= overheat_stoptimer/2)
+		icon_state = "reactor-melting"
+		if(overheat_time >= overheat_stoptimer)
+			overheating = TRUE
+			if(prob(35)) // give them a little extra time i guess?
+				goboom()
+
+	if(locate(/obj/effect/sevenwater) in loc)
+		if(GLOB.reactoron)
+			STOP_PROCESSING(SSobj, src)
+			qdel(src)
+		else
+			overheating = FALSE
+			overheat_time = 0
 
 /obj/structure/fluff/strangelight
 	name = "light"

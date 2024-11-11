@@ -199,7 +199,7 @@
 	timeout = FALSE
 
 /datum/happiness_event/high
-	description = "<span class='binfo'>I'm high as fuck</span>\n"
+	description = "<span class='binfo'>I'm high on painkillers. I can't feel anything.</span>\n"
 	happiness = 12
 
 /datum/happiness_event/relaxed

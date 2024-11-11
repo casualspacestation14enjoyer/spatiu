@@ -26,9 +26,7 @@
 /obj/structure/window/examine(mob/user)
 	. = ..(user)
 
-	if(health == maxhealth)
-		to_chat(user, "<span class='notice'>It looks fully intact.</span>")
-	else
+	if(health != maxhealth)
 		var/perc = health / maxhealth
 		if(perc > 0.75)
 			to_chat(user, "<span class='notice'>It has a few cracks.</span>")

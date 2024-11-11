@@ -238,6 +238,7 @@
 	else if(volume < effective_dose)
 		effectiveness = volume/effective_dose
 	M.add_chemical_effect(CE_PAINKILLER, pain_power * effectiveness)
+	M.add_event("high", /datum/happiness_event/high)
 	if(M.chem_doses[type] > 0.5 * overdose)
 		M.add_chemical_effect(CE_SLOWDOWN, 1)
 		if(prob(1))

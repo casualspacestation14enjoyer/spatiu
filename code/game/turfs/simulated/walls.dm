@@ -151,9 +151,7 @@
 /turf/simulated/wall/examine(mob/user)
 	. = ..(user)
 
-	if(!damage)
-		to_chat(user, "<span class='notice'>It looks fully intact.</span>")
-	else
+	if(damage)
 		var/dam = damage/150
 		if(is_reinf())
 			dam = damage/400

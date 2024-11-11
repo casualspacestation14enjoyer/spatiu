@@ -214,8 +214,8 @@
 	body_parts_covered = 0
 
 /obj/item/clothing/glasses/sunglasses
-	name = "trench aviators"
-	desc = "The sun seems to have gone out but that's not gonna stop you from looking cool."
+	name = "aviators"
+	desc = "You're twelve thousand feet underground but that's not gonna stop you from looking cool."
 	icon_state = "sun"
 	item_state = "sunglasses"
 	darkness_view = -1
