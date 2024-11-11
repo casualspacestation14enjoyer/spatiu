@@ -229,7 +229,7 @@
 
 /obj/structure/fluff/dispenser/attackby(obj/item/O, mob/user)
 	if(istype(O, /obj/item/coupon))
-		playsound(src, 'sound/spatiu/print.ogg', 60)
+		playsound(src, 'sound/effects/computer/print.ogg', 60)
 		qdel(O)
 		to_chat(user, "The machine eats up the coupon.")
 		sleep(2 SECONDS)

@@ -463,7 +463,7 @@
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
-/obj/effect/sevenwater/proc/Spread()
+/obj/effect/sevenwater/Process()
 	for(var/der in list(NORTH, SOUTH, EAST, WEST))
 		var/turf/simulated/C = get_step(loc, der)
 		if(C.density)
@@ -473,19 +473,13 @@
 			continue
 		if(locate(/obj/effect/sevenwater) in C)
 			continue
-		/*
 		if(locate(/obj/structure/sevendrain) in C.contents) // No flooding allowed!
 			continue
 		if(locate(/obj/structure/window) in C.contents)
 			continue
 		if(locate(/obj/structure/spatiudoor) in C.contents)
 			continue
-		*/
-		var/obj/effect/sevenwater/water = new /obj/effect/sevenwater(C)
-		return water.name
-
-/obj/effect/sevenwater/Process()
-	Spread()
+		new /obj/effect/sevenwater(C)
 
 /obj/structure/sevendrain
 	name = "drain"

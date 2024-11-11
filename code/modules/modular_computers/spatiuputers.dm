@@ -1,6 +1,6 @@
-/obj/machinery/kaos/spatiuputer
+/obj/machinery/spatiuputer
 	name = "computer"
-	desc = "Computing..."
+	desc = "A computer, it has a floppy disk port."
 	icon = 'icons/obj/old_computers.dmi'
 	icon_state = "old"
 	var/on = FALSE
@@ -11,17 +11,17 @@
 	var/obj/item/floppy/disk
 	var/list/recentcommands = list()
 
-/obj/machinery/kaos/spatiuputer/attack_hand(mob/user)
+/obj/machinery/spatiuputer/attack_hand(mob/user)
 	if(on)
 		return ..()
-	playsound(src, "button", 60)
+	playsound(src, "button", 100)
 	sleep(4)
 	playsound(src, 'sound/effects/computer/bootup.ogg', 60)
 	sleep(3 SECONDS)
 	on = TRUE
 	update_icon()
 
-/obj/machinery/kaos/spatiuputer/RightClick(mob/living/user)
+/obj/machinery/spatiuputer/RightClick(mob/living/user)
 	if(user.incapacitated(INCAPACITATION_STUNNED|INCAPACITATION_RESTRAINED|INCAPACITATION_KNOCKOUT))
 		return
 	if(!CanPhysicallyInteract(user))
@@ -36,11 +36,11 @@
 			return
 		processcommand(command, H)
 
-/obj/machinery/kaos/spatiuputer/Initialize(mapload, d)
+/obj/machinery/spatiuputer/Initialize(mapload, d)
 	. = ..()
 	update_icon()
 
-/obj/machinery/kaos/spatiuputer/update_icon()
+/obj/machinery/spatiuputer/update_icon()
 	if(on)
 		icon_state = "[initial(icon_state)]"
 	else
@@ -48,7 +48,7 @@
 	if(stat & BROKEN)
 		icon_state = "[initial(icon_state)]b"
 
-/obj/machinery/kaos/spatiuputer/proc/speak(var/message)
+/obj/machinery/spatiuputer/proc/speak(var/message)
 	if(stat & NOPOWER)
 		return
 
@@ -59,25 +59,26 @@
 		O.show_message("<span class='game say'><span class='name'>\The [src]</span> beeps, \"[message]\"</span>",2)
 	return
 
-/obj/machinery/kaos/spatiuputer/attackby(obj/item/O, mob/user)
+/obj/machinery/spatiuputer/attackby(obj/item/O, mob/user)
 	if(istype(O, /obj/item/floppy))
 		if(!on)
 			return
 		user.drop_item()
 		O.forceMove(src)
 		disk = O
-		playsound(src, 'sound/effects/computer/bootup.ogg', 60)
+		playsound(src, 'sound/effects/computer/audiotapein.ogg', 60)
 		return
 	return ..()
 
-/obj/machinery/kaos/spatiuputer/proc/sendmessage(var/message, var/mob/living/L)
+/obj/machinery/spatiuputer/proc/sendmessage(var/message, var/mob/living/L)
 	recentcommands += message
+	playsound(src, 'sound/effects/computer/consolebeep.ogg', 50)
 	to_chat(L, "<font color=#4af626>[message]</font>")
 
-/obj/machinery/kaos/spatiuputer/proc/send2logs(var/message, var/mob/living/L)
+/obj/machinery/spatiuputer/proc/send2logs(var/message, var/mob/living/L)
 	recentcommands += message
 
-/obj/machinery/kaos/spatiuputer/proc/processcommand(var/command, var/mob/living/carbon/human/H)
+/obj/machinery/spatiuputer/proc/processcommand(var/command, var/mob/living/carbon/human/H)
 	if(!command || !H)
 		return
 	playsound(src, "keyboardlong", 40)
@@ -120,6 +121,21 @@
 			sendmessage("WARNING: OS is unregistered! Possible pirated copy.",H)
 			sleep(3)
 			sendmessage("diagnostics: SAFE",H)
+		if("music","sing")
+			sleep(3)
+			sendmessage("Now accepting input.",H)
+			var/print = input(H, "Command Prompt", name)
+			if(!print)
+				sleep(10)
+				sendmessage("Error 204",H)
+				return
+			playsound(src, "keyboardlong", 40)
+			sleep(5)
+			var/tosing = splittext(print,",")
+			if(tosing)
+				for(var/i in tosing)
+					sleep(3)
+					playsound(src, "sound/effects/computer/beepsound[i].ogg", 60)
 		if("print")
 			sleep(3)
 			sendmessage("Now accepting input.",H)
@@ -148,7 +164,7 @@
 			speak(print)
 		if("clear","clearlogs")
 			sleep(3)
-			playsound(src, 'sound/effects/computer/bootup.ogg', 60)
+			playsound(src, 'sound/effects/computer/cargo_starttp.ogg', 100)
 			sendmessage("Now clearing logs...",H)
 			sendmessage("2%",H)
 			sleep(3)
@@ -173,13 +189,14 @@
 			sleep(3)
 			if(disk)
 				sendmessage("Eject complete",H)
+				playsound(src, 'sound/effects/computer/audiotapein.ogg', 60)
 				disk.forceMove(src.loc)
 				disk = null
 			else
 				sendmessage(":F drive is null",H)
 		if("logs","showlogs","probe","probe.exe")
 			sleep(3)
-			playsound(src, 'sound/effects/computer/bootup.ogg', 60)
+			playsound(src, 'sound/effects/computer/cargo_endtp.ogg', 60)
 			sendmessage("probe.cmd initiated.",H)
 			send2logs("LOGGED: probe.cmd launched")
 			for (var/item in recentcommands)
@@ -191,18 +208,18 @@
 
 // Spatiuputer subtypes
 
-/obj/machinery/kaos/spatiuputer/compdesk
+/obj/machinery/spatiuputer/compdesk
 	name = "computer desk"
 	icon_state = "compdesk"
 	sysfile = "computingdesk_os"
 	density = TRUE
 
-/obj/machinery/kaos/spatiuputer/terminal
+/obj/machinery/spatiuputer/terminal
 	name = "terminal"
 	icon_state = "terminal"
 	sysfile = "term_os"
 
-/obj/machinery/kaos/spatiuputer/big
+/obj/machinery/spatiuputer/big
 	name = "computing block"
 	icon_state = "bigmachine"
 	sysfile = "bigg_os"
@@ -223,7 +240,7 @@
 	if(writtenon)
 		to_chat(user, "There is something written on it. \"[writtenon]\"")
 
-/obj/item/floppy/proc/processcommand(var/command, var/mob/living/carbon/human/H, var/obj/machinery/kaos/spatiuputer/PC)
+/obj/item/floppy/proc/processcommand(var/command, var/mob/living/carbon/human/H, var/obj/machinery/spatiuputer/PC)
 	if(!command || !H || !PC)
 		return
 	switch(command)
@@ -253,7 +270,7 @@
 /obj/item/floppy/scrungus
 	writtenon = "SCRUNGUS v3.1"
 
-/obj/item/floppy/scrungus/processcommand(command, mob/living/carbon/human/H, obj/machinery/kaos/spatiuputer/PC)
+/obj/item/floppy/scrungus/processcommand(command, mob/living/carbon/human/H, obj/machinery/spatiuputer/PC)
 	if(!command || !H || !PC)
 		return
 	switch(command)
@@ -275,7 +292,7 @@
 	var/authed = FALSE
 	icon_state = "floppy3"
 
-/obj/item/floppy/cooker/processcommand(command, mob/living/carbon/human/H, obj/machinery/kaos/spatiuputer/PC)
+/obj/item/floppy/cooker/processcommand(command, mob/living/carbon/human/H, obj/machinery/spatiuputer/PC)
 	if(!command || !H || !PC)
 		return
 	switch(command)
@@ -325,18 +342,21 @@
 			sleep(3)
 			if(!authed)
 				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
+				playsound(src, 'sound/effects/computer/harshdeny.ogg', 60)
 				return
 			PC.sendmessage("There are [global.food_cans] cans left",H)
 		if("disablefood")
 			sleep(3)
 			if(!authed)
 				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
+				playsound(src, 'sound/effects/computer/harshdeny.ogg', 60)
 				return
 			PC.sendmessage("YOU CAN'T DO THAT",H)
 		if("addfood","senditoff")
 			sleep(3)
 			if(!authed)
 				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
+				playsound(src, 'sound/effects/computer/harshdeny.ogg', 60)
 				return
 			PC.sendmessage("Activating protocol",H)
 			var/obj/structure/fluff/controller/C = locate() in world
@@ -352,7 +372,7 @@
 	var/authed = FALSE
 	icon_state = "floppy2"
 
-/obj/item/floppy/communicator/processcommand(command, mob/living/carbon/human/H, obj/machinery/kaos/spatiuputer/PC)
+/obj/item/floppy/communicator/processcommand(command, mob/living/carbon/human/H, obj/machinery/spatiuputer/PC)
 	if(!command || !H || !PC)
 		return
 	switch(command)
@@ -402,8 +422,9 @@
 			sleep(3)
 			if(!authed)
 				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
+				playsound(src, 'sound/effects/computer/harshdeny.ogg', 60)
 				return
-			playsound(PC, 'sound/spatiu/print.ogg', 60)
+			playsound(PC, 'sound/effects/computer/print.ogg', 60)
 			PC.sendmessage("PRINTING FOOD STAMP. YOU ARE IN EMERGENCY RESPONSE MODE, REMEMBER THAT THIS IS FOR RATIONING.",H)
 			sleep(2 SECONDS)
 			new /obj/item/coupon(PC.loc)
@@ -411,6 +432,7 @@
 			sleep(3)
 			if(!authed)
 				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
+				playsound(src, 'sound/effects/computer/harshdeny.ogg', 60)
 				return
 			PC.sendmessage("Now accepting input.",H)
 			var/print = input(H, "Command Prompt", PC.name)
@@ -434,6 +456,7 @@
 			sleep(3)
 			if(!authed)
 				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
+				playsound(src, 'sound/effects/computer/harshdeny.ogg', 60)
 				return
 			PC.sendmessage("Now accepting input.",H)
 			var/print = input(H, "Command Prompt", PC.name)
@@ -466,7 +489,7 @@
 	writtenon = "engineering"
 	icon_state = "floppy1"
 
-/obj/item/floppy/engineer/processcommand(command, mob/living/carbon/human/H, obj/machinery/kaos/spatiuputer/PC)
+/obj/item/floppy/engineer/processcommand(command, mob/living/carbon/human/H, obj/machinery/spatiuputer/PC)
 	if(!command || !H || !PC)
 		return
 	switch(command)

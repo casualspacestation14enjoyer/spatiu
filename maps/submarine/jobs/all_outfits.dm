@@ -3,12 +3,12 @@
 
 GLOBAL_LIST_INIT(lone_thoughts, list(
 		"Why are we still here, just to suffer?",
-		"Did something happen while we are stuck here?",
+		"Did something happen while we were stuck here?",
 		"I miss my family.",
 		"Greg died last night.",
 		"I do not want to die.",
 		"I miss my loved ones.",
-		"There is no hope... anymore...",
+		"There is no hope... not anymore...",
 		"Is any of this real?",
 		"My teeth hurt.",
 		"I am not ready to die."))
