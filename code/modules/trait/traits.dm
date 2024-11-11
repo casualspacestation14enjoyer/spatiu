@@ -8,7 +8,7 @@
 
 /datum/trait/child
 	name = "child"
-	description = "I strip corpses faster than the adults, and landmines don't bother me!"
+	description = "I'm a lucky and quick son of a gun, people also love me!"
 
 /mob/living/proc/has_trait(var/datum/trait/this_trait)
 	return istype(trait, this_trait)

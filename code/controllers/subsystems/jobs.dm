@@ -414,6 +414,7 @@ SUBSYSTEM_DEF(jobs)
 			W.buckled_mob = H
 			W.add_fingerprint(H)
 
+	to_chat(H, "<div class='examinebox'> [icon2html('icons/emoji.dmi',world,"kap")] The Kapitain of this underwater bastion is the one and only [ticker.rulermob.real_name]! Hail the Kapitain! [icon2html('icons/emoji.dmi',world,"kap")] </div>")
 	to_chat(H, "<B>You are [job.total_positions == 1 ? "the" : "a"] [alt_title ? alt_title : rank].</B>")
 
 	if(job.role_desc)

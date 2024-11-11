@@ -463,35 +463,29 @@
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
-/obj/effect/sevenwater/proc/getdirections()
-	var/list/adjacent = list()
-
-	for(var/dir in list(NORTH,SOUTH,EAST,WEST,DOWN))
-		var/turf/T = get_step(src, dir)
-		if(T)
-			adjacent += T
-
-	return adjacent
+/obj/effect/sevenwater/proc/Spread()
+	for(var/der in list(NORTH, SOUTH, EAST, WEST))
+		var/turf/simulated/C = get_step(loc, der)
+		if(C.density)
+			continue
+		var/obj/machinery/door/blast/B = locate() in C
+		if(B.density)
+			continue
+		if(locate(/obj/effect/sevenwater) in C)
+			continue
+		/*
+		if(locate(/obj/structure/sevendrain) in C.contents) // No flooding allowed!
+			continue
+		if(locate(/obj/structure/window) in C.contents)
+			continue
+		if(locate(/obj/structure/spatiudoor) in C.contents)
+			continue
+		*/
+		var/obj/effect/sevenwater/water = new /obj/effect/sevenwater(C)
+		return water.name
 
 /obj/effect/sevenwater/Process()
-	spawn(5)
-		for(var/turf/C in getdirections()) // Get it? C? Like sea? Haha. Kill me.
-			var/obj/effect/sevenwater/SW = locate() in C
-			var/obj/machinery/door/blast/B = locate() in C
-			if(SW)
-				continue
-			if(B.density)
-				continue
-			if(C.density)
-				continue
-			else
-				if(locate(/obj/structure/sevendrain) in C) // No flooding allowed!
-					break
-				if(locate(/obj/structure/window) in C)
-					continue
-				if(locate(/obj/structure/spatiudoor) in C)
-					continue
-				new /obj/effect/sevenwater(C)
+	Spread()
 
 /obj/structure/sevendrain
 	name = "drain"

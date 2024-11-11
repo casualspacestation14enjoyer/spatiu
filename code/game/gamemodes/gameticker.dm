@@ -30,6 +30,8 @@ var/global/datum/controller/gameticker/ticker
 
 	var/triai = 0//Global holder for Triumvirate
 
+	var/mob/living/carbon/human/rulermob = null
+
 	var/round_end_announced = 0 // Spam Prevention. Announce round end only once.
 
 	var/list/antag_pool = list()

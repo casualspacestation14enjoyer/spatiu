@@ -332,7 +332,7 @@
 			if(!authed)
 				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
 				return
-			PC.sendmessage("YOU CAN'T DO THAT")
+			PC.sendmessage("YOU CAN'T DO THAT",H)
 		if("addfood","senditoff")
 			sleep(3)
 			if(!authed)
@@ -443,9 +443,38 @@
 				return
 			playsound(PC, "keyboardlong", 40)
 			sleep(5)
-			PC.sendmessage("Sending command...")
+			PC.sendmessage("Sending command...",H)
 			for(var/obj/machinery/door/blast/id_door/M in world)
 				if(M.id == print)
+					if(M.density)
+						spawn(0)
+							M.open()
+							return
+					else
+						spawn(0)
+							M.close()
+							return
+		if("stopexec","stopexecutefromdisk","execfrompc")
+			sleep(3)
+			PC.sendmessage("Executing from disk is now disabled.",H)
+			PC.executefromdisk = FALSE
+		else
+			sleep(5)
+			PC.sendmessage("Unknown Command",H)
+
+/obj/item/floppy/engineer
+	writtenon = "engineering"
+	icon_state = "floppy1"
+
+/obj/item/floppy/engineer/processcommand(command, mob/living/carbon/human/H, obj/machinery/kaos/spatiuputer/PC)
+	if(!command || !H || !PC)
+		return
+	switch(command)
+		if("togglewater")
+			sleep(3)
+			PC.sendmessage("Sending command...",H)
+			for(var/obj/machinery/door/blast/id_door/M in world)
+				if(M.id == "waterinput")
 					if(M.density)
 						spawn(0)
 							M.open()

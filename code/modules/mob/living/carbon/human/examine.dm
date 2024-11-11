@@ -69,7 +69,7 @@
 	msg += "<br>"
 
 	if(isChild())
-		msg += "<b>[T.He] is but a child!</b>\n"
+		msg += "<b>[T.He] is a cute little kid!</b>\n"
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user

@@ -32,6 +32,7 @@
 		H.add_stats(rand(12,17), rand(10,16), rand(8,12))
 		H.fully_replace_character_name("Kpt. [H.real_name]")
 		H.assign_random_quirk()
+		ticker.rulermob = H
 
 /datum/job/spatiu/marshal
 	title = "Marshal"

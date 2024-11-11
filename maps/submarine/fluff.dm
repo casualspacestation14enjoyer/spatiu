@@ -10,6 +10,32 @@
 	. = ..()
 	set_light(6, 5, "#FF9900")
 
+/obj/structure/phonebooth
+	name = "phone booth"
+	desc = "This used to allow you to communicate with your loved ones, now when the satellite is down it does nothing."
+	icon_state = "phonebooth"
+	anchored = TRUE
+	density = TRUE
+
+/obj/structure/capacitor
+	name = "electrical capacitor"
+	icon = 'icons/effects/96x96.dmi'
+	bound_width = 96
+	bound_height = 96
+	icon_state = "powerstation"
+	anchored = TRUE
+	density = TRUE
+
+/obj/machinery/power_generator
+	name = "HECMHG-2991_V92"
+	desc = "Supply water to boil, so you don't freeze."
+	icon = 'icons/obj/64x64.dmi'
+	icon_state = "reactor"
+	bound_width = 64
+	bound_height = 64
+	anchored = TRUE
+	density = TRUE
+
 /obj/structure/fluff/strangelight
 	name = "light"
 	desc = "You don't know where it leads, what it does or why it's here."
@@ -161,3 +187,45 @@
 		global.food_cans--
 		new /obj/item/reagent_containers/food/snacks/warfare/sardine(loc)
 		playsound(src, 'sound/machines/vending_drop.ogg', 60)
+
+/obj/structure/portablewaterpump
+	name = "PWP-942"
+	desc = "A portable water pump of German origin, it doesn't hold up well."
+	icon = 'icons/obj/atmos.dmi'
+	icon_state = "pscrubber:0"
+	density = TRUE
+	anchored = FALSE
+	var/on = FALSE
+
+/obj/structure/portablewaterpump/update_icon()
+	icon_state = "pscrubber:[on]"
+
+/obj/structure/portablewaterpump/Destroy()
+	STOP_PROCESSING(SSobj,src)
+	return ..()
+
+/obj/structure/portablewaterpump/attack_hand(mob/user)
+	playsound(src, "button", 60)
+	to_chat(user, "You press the button.")
+	on = !on
+	update_icon()
+	if(on)
+		START_PROCESSING(SSobj,src)
+	else
+		STOP_PROCESSING(SSobj,src)
+
+/obj/structure/portablewaterpump/Process()
+	if(!on)
+		STOP_PROCESSING(SSobj,src)
+		return
+	for(var/turf/S in get_all_adjacent_turfs())
+		if(!loc.density)
+			var/obj/effect/sevenwater/W = locate() in S
+			if(W)
+				playsound(src, pick('sound/spatiu/gurgle1.ogg','sound/spatiu/gurgle2.ogg','sound/spatiu/gurgle3.ogg','sound/spatiu/gurgle4.ogg'), 65)
+				qdel(W)
+		if(!S.density)
+			var/obj/effect/sevenwater/SW = locate() in S
+			if(SW)
+				playsound(src, pick('sound/spatiu/gurgle1.ogg','sound/spatiu/gurgle2.ogg','sound/spatiu/gurgle3.ogg','sound/spatiu/gurgle4.ogg'), 65)
+				qdel(SW)

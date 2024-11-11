@@ -184,6 +184,8 @@ GLOBAL_LIST_INIT(lone_thoughts, list(
 	siemens_coefficient = 0.9
 	center_of_mass = null
 	randpixel = 0
+	can_be_worn_by_child = FALSE
+	child_exclusive = FALSE
 
 /obj/item/clothing/suit/divingsuit
 	name = "diving suit"
@@ -201,3 +203,9 @@ GLOBAL_LIST_INIT(lone_thoughts, list(
 	siemens_coefficient = 0.9
 	center_of_mass = null
 	randpixel = 0
+	can_be_worn_by_child = FALSE
+	child_exclusive = FALSE
+
+/obj/item/clothing/suit/divingsuit/New()
+	. = ..()
+	slowdown_per_slot[slot_wear_suit] = 2

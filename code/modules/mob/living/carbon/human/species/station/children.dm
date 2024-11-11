@@ -4,7 +4,7 @@
 	name_plural = "Children"
 	blurb = "But a child."
 	total_health = 150 //Kids are weaker than adults.
-	min_age = 10
+	min_age = 8
 	max_age = 14
 	icobase = 'icons/mob/human_races/child/r_child.dmi'
 	deform = 'icons/mob/human_races/child/r_child.dmi'
@@ -19,8 +19,8 @@
 	H.age = rand(min_age,max_age)//Random age for kiddos.
 	if(H.f_style)//Children don't get beards.
 		H.f_style = "Shaved"
-	to_chat(H, "<span class='info'><big>You're [H.age] years old! Act like it!</big></span>")
-	to_chat(H, "<big><span class='warning'>CHILDREN ARE CLUMSY AND CANNOT USE GUNS OR MELEE WEAPONS! DOING SO WILL KILL YOU!</span></big>")
+	to_chat(H, "<span class='info'>I'm [H.age] years old today! Yay!</span>")
+	//to_chat(H, "<big><span class='warning'>CHILDREN ARE CLUMSY AND CANNOT USE GUNS OR MELEE WEAPONS! DOING SO WILL KILL YOU!</span></big>")
 	H.update_eyes()	//hacky fix, i don't care and i'll never ever care
 	return ..()
 
