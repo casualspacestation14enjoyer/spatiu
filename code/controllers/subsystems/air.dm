@@ -65,7 +65,7 @@ SUBSYSTEM_DEF(air)
 	name = "Air"
 	priority = SS_PRIORITY_AIR
 	init_order = INIT_ORDER_AIR
-	flags = SS_NO_INIT//SS_POST_FIRE_TIMING
+	flags = SS_POST_FIRE_TIMING
 
 	//Geometry lists
 	var/list/zones = list()
@@ -86,11 +86,10 @@ SUBSYSTEM_DEF(air)
 
 	var/active_zones = 0
 	var/next_id = 1
-	can_fire = FALSE
 
 /datum/controller/subsystem/air/proc/reboot()
 	// Stop processing while we rebuild.
-	//can_fire = FALSE
+	can_fire = FALSE
 
 	// Make sure we don't rebuild mid-tick.
 	if (state != SS_IDLE)
@@ -116,7 +115,7 @@ SUBSYSTEM_DEF(air)
 
 	// Update next_fire so the MC doesn't try to make up for missed ticks.
 	next_fire = world.time + wait
-	//can_fire = TRUE
+	can_fire = TRUE
 
 /datum/controller/subsystem/air/stat_entry()
 	var/list/out = list(

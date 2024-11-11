@@ -38,7 +38,7 @@
 			if(removed)
 				var/heat_transfer = removed.get_thermal_energy_change(T20C)
 				if(heat_transfer > 0)	//heating air
-					heat_transfer = min( heat_transfer, 40 KILOWATTS) //limit by the power rating of the heater
+					heat_transfer = min( heat_transfer, 100 MEGAWATTS) //limit by the power rating of the heater
 
 					removed.add_thermal_energy(heat_transfer)
 			env.merge(removed)

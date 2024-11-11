@@ -159,11 +159,12 @@
 
 	owner.oxygen_alert = failed_inhale * 2
 
-	var/inhaled_gas_used = inhaling/2
-	breath.adjust_gas(breath_type, -inhaled_gas_used, update = 0) //update afterwards
+	//var/inhaled_gas_used = inhaling/2
+	//breath.adjust_gas(breath_type, -inhaled_gas_used, update = 0) //update afterwards
 
 	if(exhale_type)
-		breath.adjust_gas_temp(exhale_type, inhaled_gas_used, owner.bodytemperature, update = 0) //update afterwards
+		//breath.adjust_gas_temp(exhale_type, inhaled_gas_used, owner.bodytemperature, update = 0) //update afterwards
+		// You don't exhale carbon dioxide or inhale oxygen as you breathe every 2 seconds. Not good.
 		// Too much exhaled gas in the air
 		var/word
 		var/warn_prob
