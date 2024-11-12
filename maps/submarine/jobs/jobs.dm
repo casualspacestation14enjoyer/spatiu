@@ -78,6 +78,28 @@
 		H.fully_replace_character_name("MeO. [H.real_name]")
 		H.assign_random_quirk()
 
+/datum/job/spatiu/maintenanceofficer
+	title = "Maintenance Officer"
+	lore = "You make sure everyone is nice and warm while keeping the reactor in good shape, you also make sure the walls don't cave in."
+	department = "Filth"
+	department_flag = CIV
+	total_positions = 2
+	outfit_type = /decl/hierarchy/outfit/job/spatiu/maintenanceofficer
+
+	//Baseline skill defines
+	medical_skill = 2
+	surgery_skill = 2
+	ranged_skill = 2
+	melee_skill = 6
+	engineering_skill = 10
+
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.voice_in_head(pick(GLOB.lone_thoughts))
+		H.add_stats(14, rand(12,16), rand(12,14))
+		H.fully_replace_character_name("MaO. [H.real_name]")
+		H.assign_random_quirk()
+
 /datum/job/spatiu/logisticsofficer
 	title = "Logistics Officer"
 	lore = "You're the cook, janitor and courier of this god-forsaken outpost. You don't want to be here, and you won't be if you're not useful; just not at the place you want to be. Which will be the ocean."

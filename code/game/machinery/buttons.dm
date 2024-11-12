@@ -13,6 +13,29 @@
 	var/_wifi_id
 	var/datum/wifi/sender/wifi_sender
 
+/obj/machinery/button/lever
+	name = "lever"
+	desc = "It controls something."
+	icon = 'icons/obj/stationobjs.dmi'
+	icon_state = "lever"
+
+/obj/machinery/button/lever/activate(mob/living/user)
+	if(operating || !istype(wifi_sender))
+		return
+
+	operating = 1
+	active = 1
+	update_icon()
+	wifi_sender.activate(user)
+	sleep(10)
+	operating = 0
+
+/obj/machinery/button/lever/update_icon()
+	if(active)
+		icon_state = "lever1"
+	else
+		icon_state = "lever"
+
 /obj/machinery/button/Initialize()
 	. = ..()
 	update_icon()

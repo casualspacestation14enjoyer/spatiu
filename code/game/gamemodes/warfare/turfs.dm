@@ -498,7 +498,10 @@
 	..()
 	if(closed)
 		icon_state = "[initial(icon_state)]-closed"
-	else if(welded)
+	else
+		icon_state = "[initial(icon_state)]"
+
+	if(welded)
 		icon_state = "[initial(icon_state)]-welded"
 
 /obj/structure/sevendrain/attack_hand(mob/user)
@@ -506,12 +509,14 @@
 		return
 	if(closed)
 		to_chat(user, "<span class='notice'>I manually start opening the drain.</span>")
-		if(do_after(user, 3 SECONDS, src, TRUE)) // TODO: add sound
+		playsound(src, 'sound/spatiu/valve.ogg', 60)
+		if(do_after(user, 3 SECONDS, src, TRUE))
 			closed = TRUE
 			START_PROCESSING(SSobj, src)
 	else
 		to_chat(user, "<span class='notice'>I manually start closing the drain.</span>")
-		if(do_after(user, 3 SECONDS, src, TRUE)) // TODO: add sound
+		playsound(src, 'sound/spatiu/valve.ogg', 60)
+		if(do_after(user, 3 SECONDS, src, TRUE))
 			closed = TRUE
 			STOP_PROCESSING(SSobj, src)
 	update_icon()

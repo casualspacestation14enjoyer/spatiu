@@ -251,8 +251,8 @@
 	begins_closed = FALSE
 
 /obj/machinery/door/blast/id_door
-	name = "door"
-	desc = null
+	name = "autodoor"
+	desc = "A type of door accessible only by dedicated access protocols."
 	icon_state_open = "iddoor_open"
 	icon_state_opening = "iddoor_opening"
 	icon_state_closed = "iddoor_close"

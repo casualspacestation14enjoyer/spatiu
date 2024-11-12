@@ -134,7 +134,7 @@
 //Engineering
 /obj/item/clothing/suit/storage/hazardvest
 	name = "hazard vest"
-	desc = "A high-visibility vest used in work zones."
+	desc = "A high-visibility vest used in work zones, except this one probably doesn't do anything, it barely reflects light."
 	icon_state = "hazard"
 	item_state = "hazard"
 	blood_overlay_type = "armor"

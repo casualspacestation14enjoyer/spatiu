@@ -32,15 +32,13 @@
 	if(on)
 		var/datum/gas_mixture/env = loc.return_air()
 		if(!(env && abs(env.temperature - T20C) <= 0.1))
-			var/transfer_moles = 0.25 * env.total_moles
-			var/datum/gas_mixture/removed = env.remove(transfer_moles)
+			var/datum/gas_mixture/removed = env.remove(0.25 * env.total_moles)
 
 			if(removed)
-				var/heat_transfer = removed.get_thermal_energy_change(T20C)
-				if(heat_transfer > 0)	//heating air
-					heat_transfer = min( heat_transfer, 100 MEGAWATTS) //limit by the power rating of the heater
+				var/energy_used = min( removed.get_thermal_energy_change(T20C) , 60 GIGAWATTS)
 
-					removed.add_thermal_energy(heat_transfer)
+				//removed.add_thermal_energy(energy_used)
+				removed.temperature += energy_used
 			env.merge(removed)
 
 /obj/structure/capacitor
@@ -68,6 +66,26 @@
 /obj/machinery/heat_generator/Initialize(mapload, d)
 	. = ..()
 	START_PROCESSING(SSobj, src)
+
+/obj/machinery/heat_generator/proc/turnon()
+	new/obj/effect/sparks(src.loc)
+	new/obj/effect/effect/smoke/illumination(src.loc, 5, range=30, power=30, color="#ffffff")
+
+	for(var/mob/living/carbon/M in hear(7, get_turf(src)))
+		bang(get_turf(src), M)
+
+	GLOB.reactoron = TRUE
+	playsound(src.loc, 'sound/effects/reactor.ogg', 100, 1)
+
+/obj/machinery/heat_generator/proc/turnoff()
+	new/obj/effect/sparks(src.loc)
+	new/obj/effect/effect/smoke/illumination(src.loc, 5, range=30, power=30, color="#ffffff")
+
+	for(var/mob/living/carbon/M in hear(7, get_turf(src)))
+		bang(get_turf(src), M)
+
+	GLOB.reactoron = FALSE
+	playsound(src.loc, 'sound/effects/reactor.ogg', 100, 1)
 
 /obj/machinery/heat_generator/proc/goboom()
 	if(overheating)

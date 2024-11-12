@@ -18,6 +18,7 @@
 		/datum/job/spatiu/kapitain,
 		/datum/job/spatiu/marshal,
 		/datum/job/spatiu/logisticsofficer,
+		/datum/job/spatiu/maintenanceofficer,
 		/datum/job/spatiu/medicalofficer,
 		/datum/job/spatiu/cadet
 	)

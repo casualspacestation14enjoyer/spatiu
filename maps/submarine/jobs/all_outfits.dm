@@ -120,12 +120,26 @@ GLOBAL_LIST_INIT(lone_thoughts, list(
 	item_state = "lb_suit"
 	worn_state = "qm"
 
+/decl/hierarchy/outfit/job/spatiu/maintenanceofficer // TODO: make clothing less bright
+	name = OUTFIT_JOB_NAME("Maintenance Officer")
+	uniform = /obj/item/clothing/under/maintenanceofficer
+	gloves = /obj/item/clothing/gloves/thick
+	shoes = /obj/item/clothing/shoes/workboots
+	l_pocket = /obj/item/device/flashlight
+	suit = /obj/item/clothing/suit/storage/hazardvest
+
+/obj/item/clothing/under/maintenanceofficer
+	name = "Maintenance Officer Uniform"
+	desc = "Shiny."
+	icon_state = "engine"
+	item_state = "engi_suit"
+	worn_state = "engine"
+
 /decl/hierarchy/outfit/job/spatiu/medicalofficer
 	name = OUTFIT_JOB_NAME("Medical Officer")
 	uniform = /obj/item/clothing/under/medicalofficer
 	mask = /obj/item/clothing/mask/surgical
 	shoes = /obj/item/clothing/shoes/white
-	belt = /obj/item/storage/belt/medical/full
 
 /obj/item/clothing/under/medicalofficer
 	name = "Medical Officer Uniform"

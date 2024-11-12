@@ -163,7 +163,14 @@
 	..()
 	var/obj/structure/sevendrain/S = parent
 	if(istype(S))
-		S.closed = !S.closed
+		if(S.closed)
+			playsound(S, 'sound/spatiu/valve.ogg', 30)
+			S.closed = FALSE
+			S.update_icon()
+		else
+			playsound(S, 'sound/spatiu/valve.ogg', 30)
+			S.closed = TRUE
+			S.update_icon()
 
 //-------------------------------
 // Sparker

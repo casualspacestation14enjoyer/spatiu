@@ -10,6 +10,7 @@
 	var/locked = FALSE
 	var/doing = FALSE
 	var/opaqa = TRUE
+	var/manualdoor = FALSE
 	var/timetopen = 40
 	var/opening_sound = 'sound/machines/airlock_open_force.ogg'
 	var/closing_sound = 'sound/machines/airlock_close_force.ogg'
@@ -58,6 +59,7 @@
 	name = "door"
 	icon_state = "manual_closed"
 	base_icon = "manual"
+	manualdoor = TRUE
 	timetopen = 0
 	opening_sound = 'sound/effects/doorpen.ogg'
 	closing_sound = 'sound/effects/doorcreaky.ogg'
