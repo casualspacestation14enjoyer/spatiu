@@ -219,6 +219,9 @@
 	desc = "Fit for war, and not much else."
 	icon_state = "warfare_satchel"
 
+/obj/item/storage/backpack/satchel/warfare/grimshart
+	desc = "Pretty much everyone has it to store all their shit."
+
 /obj/item/storage/backpack/satchel/warfare/chestrig
 	name = "Chestrig"
 	desc = "Holds ammo and other goodies. But not a lot of it."

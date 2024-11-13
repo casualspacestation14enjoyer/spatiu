@@ -175,6 +175,14 @@
 	plane = ABOVE_HUMAN_PLANE
 	layer = ABOVE_HUMAN_LAYER
 
+/obj/structure/poster/alt
+	icon = 'icons/obj/posters.dmi'
+	icon_state = "poster_triangle"
+
+/obj/structure/poster/alt/New()
+	..()
+	icon_state = pick(icon_states(icon))
+
 /obj/structure/poster/red
 	name = "Red Propganda"
 	icon_state = "red1"

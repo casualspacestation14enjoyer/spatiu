@@ -19,8 +19,8 @@
 		/datum/job/spatiu/marshal,
 		/datum/job/spatiu/logisticsofficer,
 		/datum/job/spatiu/maintenanceofficer,
-		/datum/job/spatiu/medicalofficer,
-		/datum/job/spatiu/cadet
+		/datum/job/spatiu/medicalofficer
+		///datum/job/spatiu/cadet // Useless
 	)
 
 	station_levels = list(1,2)
@@ -41,25 +41,10 @@
 
 //Overriding event containers to remove random events.
 /datum/event_container/mundane
-	available_events = list(
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars1",/datum/event/mortar,100),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars2",/datum/event/mortar,100),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars3",/datum/event/mortar,100),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars4",/datum/event/mortar,100)
-		)
+	available_events = list()
 
 /datum/event_container/moderate
-	available_events = list(
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars1",/datum/event/mortar,100),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars2",/datum/event/mortar,100),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars3",/datum/event/mortar,100),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars4",/datum/event/mortar,100)
-	)
+	available_events = list()
 
 /datum/event_container/major
-	available_events = list(
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars1",/datum/event/mortar,100),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars2",/datum/event/mortar,100),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars3",/datum/event/mortar,100),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars4",/datum/event/mortar,100)
-	)
+	available_events = list()

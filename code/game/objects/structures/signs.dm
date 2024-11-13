@@ -21,6 +21,16 @@
 		else
 	return
 
+/obj/structure/sign/descript
+	name = "sign"
+	icon_state = "nondescript"
+	var/writtenon = "FUCK!"
+
+/obj/structure/sign/descript/examine(mob/user, distance, infix, suffix)
+	. = ..()
+	if(writtenon)
+		to_chat(user, "There is something written on it: \"[writtenon]\"")
+
 /obj/structure/sign/attackby(obj/item/tool as obj, mob/user as mob)	//deconstruction
 	if(isScrewdriver(tool) && !istype(src, /obj/structure/sign/double))
 		to_chat(user, "You unfasten the sign with your [tool.name].")

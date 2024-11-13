@@ -63,6 +63,64 @@
 	var/overheat_stoptimer = 3000 // 5 mins
 	var/overheat_time = 0
 
+/obj/machinery/heat_generator/proc/bang(var/turf/T , var/mob/living/carbon/M)  // copied from flashbang code
+	var/eye_safety = 0
+	var/ear_safety = 0
+	if(iscarbon(M))
+		eye_safety = M.eyecheck()
+		if(ishuman(M))
+			if(istype(M:l_ear, /obj/item/clothing/ears/earmuffs) || istype(M:r_ear, /obj/item/clothing/ears/earmuffs))
+				ear_safety += 2
+			if(HULK in M.mutations)
+				ear_safety += 1
+			if(istype(M:head, /obj/item/clothing/head/helmet))
+				ear_safety += 1
+
+	if(eye_safety < FLASH_PROTECTION_MODERATE)
+		M.flash_eyes()
+		M.Stun(2)
+		M.Weaken(10)
+
+	if((get_dist(M, T) <= 2 || src.loc == M.loc || src.loc == M))
+		if(ear_safety > 0)
+			M.KnockDown()
+		else
+			M.Stun(10)
+			M.Weaken(3)
+			if ((prob(14) || (M == src.loc && prob(70))))
+				M.ear_damage += rand(1, 10)
+			else
+				M.ear_damage += rand(0, 5)
+				M.ear_deaf = max(M.ear_deaf,15)
+
+	else if(get_dist(M, T) <= 5)
+		if(!ear_safety)
+			M.Stun(8)
+			M.ear_damage += rand(0, 3)
+			M.ear_deaf = max(M.ear_deaf,10)
+
+	else if(!ear_safety)
+		M.Stun(4)
+		M.ear_damage += rand(0, 1)
+		M.ear_deaf = max(M.ear_deaf,5)
+
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		var/obj/item/organ/internal/eyes/E = H.internal_organs_by_name[BP_EYES]
+		if (E && E.damage >= E.min_bruised_damage)
+			to_chat(M, "<span class='danger'>Your eyes start to burn badly!</span>")
+			if (E.damage >= E.min_broken_damage)
+				to_chat(M, "<span class='danger'>You can't see anything!</span>")
+	if (M.ear_damage >= 15)
+		to_chat(M, "<span class='danger'>Your ears start to ring badly!</span>")
+		if (prob(M.ear_damage - 10 + 5))
+			to_chat(M, "<span class='danger'>You can't hear anything!</span>")
+			M.sdisabilities |= DEAF
+	else
+		if (M.ear_damage >= 5)
+			to_chat(M, "<span class='danger'>Your ears start to ring!</span>")
+	M.update_icons()
+
 /obj/machinery/heat_generator/Initialize(mapload, d)
 	. = ..()
 	START_PROCESSING(SSobj, src)
@@ -258,14 +316,13 @@
 			to_chat(user, "...nothing happens.")
 
 /obj/structure/fluff/dispenser/attack_hand(mob/user)
-	if(!allowed)
+	if((!allowed && GLOB.food_cans > 0) || !(GLOB.food_allowed))
 		playsound(src, 'sound/machines/airlock.ogg', 60)
 		return
-	if(global.food_cans > 0)
-		allowed = FALSE
-		global.food_cans--
-		new /obj/item/reagent_containers/food/snacks/warfare/sardine(loc)
-		playsound(src, 'sound/machines/vending_drop.ogg', 60)
+	allowed = FALSE
+	GLOB.food_cans--
+	new /obj/item/reagent_containers/food/snacks/warfare/sardine(loc)
+	playsound(src, 'sound/machines/vending_drop.ogg', 60)
 
 /obj/structure/portablewaterpump
 	name = "PWP-942"

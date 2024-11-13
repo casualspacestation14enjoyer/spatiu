@@ -344,14 +344,23 @@
 				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
 				playsound(src, 'sound/effects/computer/harshdeny.ogg', 60)
 				return
-			PC.sendmessage("There are [global.food_cans] cans left",H)
+			PC.sendmessage("There are [GLOB.food_cans] cans left",H)
 		if("disablefood")
 			sleep(3)
 			if(!authed)
 				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
 				playsound(src, 'sound/effects/computer/harshdeny.ogg', 60)
 				return
-			PC.sendmessage("YOU CAN'T DO THAT",H)
+			PC.sendmessage("Emergency rationing disabled.",H)
+			GLOB.food_allowed = FALSE
+		if("enablefood")
+			sleep(3)
+			if(!authed)
+				PC.sendmessage("YOU ARE NOT AUTHORIZED!",H)
+				playsound(src, 'sound/effects/computer/harshdeny.ogg', 60)
+				return
+			PC.sendmessage("Emergency rationing enabled.",H)
+			GLOB.food_allowed = TRUE
 		if("addfood","senditoff")
 			sleep(3)
 			if(!authed)
@@ -364,7 +373,7 @@
 				sleep(2)
 				PC.sendmessage("Can found, sending to storage via pneumatic tube",H)
 				qdel(i)
-				global.food_cans++
+				GLOB.food_cans++
 			PC.sendmessage("All cans sent",H)
 
 /obj/item/floppy/communicator
@@ -513,7 +522,7 @@
 			PC.sendmessage("Heating redirection process initiated.",H)
 			sleep(10)
 			for(var/obj/structure/radiator/R in world)
-				sleep(rand(10,25))
+				sleep(rand(5,15))
 				playsound(R, "button", 60)
 				R.on = TRUE
 				START_PROCESSING(SSobj,R)

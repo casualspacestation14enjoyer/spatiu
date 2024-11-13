@@ -6,8 +6,6 @@ GLOBAL_LIST_EMPTY(ckey_directory) //all ckeys with associated client
 //Server access whitelist
 var/global/list/ckey_whitelist = null
 
-var/global/food_cans = 15 // 15 to start with
-
 var/global/list/hellbans = null//Hellbanned boys
 
 
@@ -20,6 +18,8 @@ GLOBAL_LIST_EMPTY(ghost_mob_list)   //List of all ghosts, including clientless. 
 
 GLOBAL_VAR(cargo_password)			//Goes into the mind of the Requisitions Officer.
 GLOBAL_VAR(cook_password)
+GLOBAL_VAR_INIT(food_cans, 15)
+GLOBAL_VAR_INIT(food_allowed, TRUE)
 
 GLOBAL_VAR(final_words) //Final words of the first person who died.
 

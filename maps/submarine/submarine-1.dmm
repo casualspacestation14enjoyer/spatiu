@@ -3,28 +3,30 @@
 "aw" = (/obj/structure/closet/cabinet{pixel_x = -3},/obj/effect/floor_decal/industrial/warning_white,/obj/item/clothing/suit/divingsuit,/obj/item/clothing/head/helmet/divinghelm,/turf/simulated/floor/tiled/dark,/area/centcom)
 "aG" = (/obj/structure/spatiudoor,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "aK" = (/obj/structure/fluff/cryogenic,/obj/effect/landmark/start/cadet,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
-"bt" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small{dir = 1},/turf/simulated/floor/tiled,/area/centcom)
-"bD" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/fluff/processor,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
+"bt" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small{dir = 1},/obj/structure/poster/alt{pixel_y = 32},/turf/simulated/floor/tiled,/area/centcom)
+"bz" = (/obj/effect/decal/cleanable/blood/splatter,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
+"bD" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/fluff/processor,/obj/structure/poster/alt{pixel_y = 32},/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "cj" = (/obj/structure/table/woodentable,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "cl" = (/obj/structure/sevendrain{id = "drainwater"; _wifi_id = "drainwater"},/obj/effect/floor_decal/industrial/warning_white/corner{dir = 8},/turf/simulated/floor/tiled/dark,/area/centcom)
-"co" = (/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/generic,/turf/simulated/floor/tiled,/area/centcom)
+"co" = (/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/generic,/obj/structure/poster/alt{pixel_y = 32},/turf/simulated/floor/tiled,/area/centcom)
 "cu" = (/obj/effect/decal/cleanable/dirt,/obj/effect/floor_decal/industrial/loading{dir = 8},/turf/simulated/floor/tiled/dark,/area/centcom)
 "cE" = (/obj/effect/floor_decal/industrial/warning_white,/turf/simulated/floor/tiled/dark,/area/centcom)
 "cP" = (/obj/structure/bed/chair/wood{dir = 1; pixel_y = 17},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/turf/simulated/floor/wood/grimshart,/area/centcom)
-"cS" = (/obj/structure/sink{dir = 4},/obj/effect/decal/cleanable/dirt,/obj/structure/mirror{pixel_x = 32},/obj/effect/decal/cleanable/generic,/turf/simulated/floor/tiled,/area/centcom)
+"cS" = (/obj/structure/sink{dir = 4},/obj/effect/decal/cleanable/dirt,/obj/structure/mirror{pixel_x = 32},/obj/effect/decal/cleanable/generic,/obj/structure/poster/alt{pixel_y = -32},/turf/simulated/floor/tiled,/area/centcom)
 "cU" = (/obj/structure/phonebooth,/turf/simulated/floor/tiled/dark,/area/centcom)
 "cY" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "dc" = (/obj/structure/curtain/medical,/turf/simulated/floor/tiled/dark,/area/centcom)
 "dn" = (/obj/structure/closet/cabinet{pixel_x = 3},/obj/item/handcuffs{desc = ""},/obj/item/handcuffs{desc = ""},/turf/simulated/floor/tiled/dark,/area/centcom)
 "dv" = (/obj/structure/bed,/obj/effect/landmark/start{name = "Kapitain"},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "dB" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/tiled/dark,/area/centcom)
+"dI" = (/obj/structure/closet/crate/freezer,/obj/item/organ/internal/liver,/obj/item/organ/internal/liver,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "dQ" = (/obj/machinery/light,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "eh" = (/obj/structure/sink{dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "ei" = (/obj/effect/decal/cleanable/dirt,/obj/structure/radiator{dir = 4; pixel_x = 10},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "ey" = (/obj/effect/floor_decal/industrial/warning_white,/turf/simulated/floor/reinforced/grimshart,/area/space)
 "eB" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "eF" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/railing,/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/dark,/area/centcom)
-"eJ" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/sink{dir = 8},/turf/simulated/floor/tiled/dark,/area/centcom)
+"eJ" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/sink{dir = 8},/obj/item/cigbutt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "eO" = (/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/portablewaterpump,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "eQ" = (/obj/structure/table/steel,/obj/item/pen{pixel_y = -6; pixel_x = 3},/turf/simulated/floor/tiled/dark,/area/centcom)
 "eU" = (/obj/machinery/light{dir = 4},/obj/item/floppy,/obj/item/floppy,/obj/structure/closet/cabinet{name = "blank floppy disk storage"},/turf/simulated/floor/tiled/dark,/area/centcom)
@@ -36,6 +38,7 @@
 "fA" = (/obj/structure/table/steel,/obj/machinery/spatiuputer,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "gl" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "gm" = (/obj/structure/spatiudoor/manual,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
+"gA" = (/obj/effect/decal/cleanable/dirt,/obj/effect/floor_decal/industrial/hatch/yellow,/obj/structure/sign/warning/nosmoking_2{pixel_y = 32},/turf/simulated/floor/tiled/dark,/area/centcom)
 "gB" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/machinery/light{dir = 4},/turf/simulated/floor/tiled/dark,/area/centcom)
 "gM" = (/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/dark,/area/centcom)
 "gP" = (/obj/structure/closet/cabinet{pixel_x = 3},/obj/item/reagent_containers/food/drinks/glass2/square,/obj/item/reagent_containers/food/drinks/glass2/square,/obj/item/reagent_containers/food/drinks/glass2/square,/obj/item/reagent_containers/food/drinks/glass2/square,/obj/item/reagent_containers/food/drinks/glass2/square,/obj/item/reagent_containers/food/drinks/glass2/square,/obj/item/reagent_containers/food/drinks/glass2/square,/obj/item/reagent_containers/food/drinks/glass2/square,/obj/item/reagent_containers/food/drinks/glass2/square,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
@@ -47,13 +50,16 @@
 "hy" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/machinery/button/lever{pixel_x = 26; id = "drainwater"; _wifi_id = "drainwater"},/turf/simulated/floor/tiled/dark,/area/centcom)
 "hE" = (/obj/machinery/heat_generator{pixel_y = -15; pixel_x = 5},/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "hG" = (/obj/structure/bed/chair/wood{dir = 1; pixel_y = 17},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
+"hP" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "ig" = (/obj/structure/table/steel,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "ip" = (/obj/structure/railing{icon_state = "mcorneroverlay"; dir = 8},/turf/simulated/floor/beach/sand/water,/area/space)
 "iy" = (/obj/structure/bed/chair/office/dark{dir = 4},/turf/simulated/floor/tiled/dark,/area/centcom)
 "iA" = (/obj/machinery/light{dir = 4},/turf/simulated/floor/tiled/dark,/area/centcom)
+"iC" = (/obj/structure/closet/crate/freezer,/obj/item/organ/internal/lungs,/obj/item/organ/internal/lungs,/obj/machinery/light/small/red{dir = 1},/turf/simulated/floor/reinforced/grimshart,/area/centcom)
+"iG" = (/obj/structure/sevendrain{id = "drainwater"; _wifi_id = "drainwater"},/obj/effect/decal/cleanable/dirt,/obj/structure/poster/alt{pixel_y = 32},/turf/simulated/floor/tiled/dark,/area/centcom)
 "iH" = (/obj/structure/toilet{pixel_y = 21},/obj/machinery/light/small{dir = 2},/turf/simulated/floor/tiled,/area/centcom)
 "iI" = (/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
-"iV" = (/obj/machinery/light,/turf/simulated/floor/wood/grimshart,/area/centcom)
+"iV" = (/obj/machinery/light,/obj/item/cigbutt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "jh" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small{dir = 1},/obj/structure/fluff/controller,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "jz" = (/obj/structure/railing{dir = 8},/turf/simulated/floor/beach/sand/water,/area/space)
 "jN" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/centcom)
@@ -61,6 +67,7 @@
 "ke" = (/obj/machinery/light{dir = 8},/obj/machinery/spatiuputer/compdesk,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "kl" = (/obj/structure/table/rack,/obj/item/storage/firstaid/adv,/obj/item/storage/firstaid/adv,/turf/simulated/floor/tiled/dark,/area/centcom)
 "km" = (/obj/effect/decal/cleanable/generic,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
+"kp" = (/obj/structure/closet/crate/freezer,/obj/item/organ/internal/heart,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "kz" = (/obj/structure/bed/chair{dir = 1},/obj/effect/decal/cleanable/blood/splatter,/obj/machinery/light/small/emergency,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "kA" = (/obj/structure/sevendrain{id = "drainwater"; _wifi_id = "drainwater"},/obj/structure/spatiudoor,/turf/simulated/floor/plating,/area/centcom)
 "kB" = (/obj/effect/landmark{name = "JoinLate"},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
@@ -72,6 +79,8 @@
 "lW" = (/obj/structure/statue,/turf/simulated/floor/tiled/dark,/area/centcom)
 "lZ" = (/obj/effect/decal/cleanable/generic,/obj/effect/decal/cleanable/dirt,/obj/structure/closet/cabinet,/obj/item/mop,/obj/item/reagent_containers/glass/bucket,/obj/item/material/hatchet,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "mb" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/railing{dir = 8},/turf/simulated/floor/tiled/dark,/area/centcom)
+"mF" = (/obj/structure/table/rack,/obj/effect/floor_decal/industrial/hatch/yellow,/obj/machinery/light/small/red{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
+"mG" = (/obj/structure/table/rack,/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "mH" = (/obj/effect/decal/cleanable/dirt,/obj/structure/closet/cabinet{pixel_x = 3},/obj/item/stack/teeth,/obj/item/stack/teeth,/obj/item/stack/teeth,/obj/item/stack/teeth,/obj/item/stack/teeth,/obj/item/stack/teeth,/obj/item/stack/teeth,/obj/item/stack/teeth,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "mL" = (/obj/structure/table/woodentable,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "mO" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled/dark,/area/centcom)
@@ -92,11 +101,13 @@
 "qa" = (/obj/effect/decal/cleanable/dirt,/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/closet/cabinet,/obj/item/clothing/mask/gas/ancient,/obj/item/clothing/mask/gas/ancient,/turf/simulated/floor/tiled/dark,/area/centcom)
 "qg" = (/obj/structure/spatiudoor/indoor,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "qh" = (/obj/effect/decal/cleanable/dirt,/obj/structure/spatiudoor/medical,/turf/simulated/floor/tiled/dark,/area/centcom)
+"qi" = (/obj/structure/table/rack,/obj/effect/decal/cleanable/dirt,/obj/item/trash/warfare_can/sardine,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "qx" = (/obj/effect/decal/cleanable/generic,/obj/structure/sink{dir = 8},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "qy" = (/obj/effect/decal/cleanable/blood/drip,/obj/structure/sevendrain{id = "drainwater"; _wifi_id = "drainwater"},/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "qH" = (/obj/effect/decal/cleanable/dirt,/obj/structure/railing{dir = 8},/turf/simulated/floor/tiled/dark,/area/centcom)
 "qJ" = (/obj/effect/decal/cleanable/generic,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "qQ" = (/obj/machinery/light{dir = 1},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
+"ra" = (/obj/structure/table/rack,/obj/item/storage/firstaid/surgery,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "rp" = (/obj/effect/decal/cleanable/dirt,/obj/structure/table/steel,/obj/machinery/light/small/red{dir = 1},/obj/item/melee/telebaton{pixel_y = 7},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "rt" = (/obj/structure/table/woodentable,/obj/machinery/light{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "rB" = (/obj/machinery/light{dir = 1},/obj/structure/table/steel,/obj/item/paper_bin{pixel_x = -4; pixel_y = 12},/obj/item/pen{pixel_y = -6; pixel_x = 3},/turf/simulated/floor/tiled/dark,/area/centcom)
@@ -109,6 +120,7 @@
 "ss" = (/obj/effect/decal/cleanable/dirt,/obj/item/stack/teeth,/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "sF" = (/obj/structure/spatiudoor,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "sJ" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/turf/simulated/floor/wood/grimshart,/area/centcom)
+"th" = (/obj/structure/poster/alt{pixel_y = -32},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "tk" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "tl" = (/obj/effect/floor_decal/industrial/warning_white{dir = 4},/turf/simulated/floor/reinforced/grimshart,/area/space)
 "tt" = (/obj/structure/sevendrain{id = "drainwater"; _wifi_id = "drainwater"},/obj/structure/spatiudoor/indoor,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
@@ -118,6 +130,7 @@
 "uf" = (/obj/structure/table/steel,/obj/machinery/light{dir = 4},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "ug" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/turf/simulated/floor/tiled/dark,/area/centcom)
 "up" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
+"uw" = (/obj/structure/table/rack,/obj/effect/floor_decal/industrial/hatch/yellow,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "uz" = (/obj/structure/spatiudoor/manual,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "vj" = (/obj/structure/table/steel,/obj/item/storage/fancy/cigarettes/dromedaryco{pixel_y = 9},/obj/item/storage/fancy/cigarettes/dromedaryco{pixel_x = 9},/obj/item/flame/lighter{pixel_y = 5; pixel_x = -10},/obj/effect/decal/cleanable/dirt,/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled/dark,/area/centcom)
 "vy" = (/obj/structure/cable{icon_state = "1-2"},/turf/simulated/floor/beach/sand/water,/area/space)
@@ -125,8 +138,10 @@
 "vP" = (/obj/structure/grille,/obj/structure/window/reinforced/full,/turf/simulated/floor/plating,/area/centcom)
 "vS" = (/obj/effect/decal/cleanable/generic,/obj/effect/decal/cleanable/dirt,/obj/structure/closet/cabinet{pixel_x = 3},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "vT" = (/obj/structure/fluff/dispenser,/turf/simulated/floor/wood/grimshart,/area/centcom)
+"wl" = (/obj/effect/decal/cleanable/dirt,/obj/item/cigbutt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "wx" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled/dark,/area/centcom)
 "wz" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small{dir = 8},/obj/structure/radiator{pixel_y = 24},/turf/simulated/floor/wood/grimshart,/area/centcom)
+"wU" = (/obj/structure/table/rack,/obj/machinery/light/small/red{dir = 1},/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "wV" = (/obj/structure/bed/chair,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "wW" = (/obj/structure/cable{icon_state = "5-6"},/turf/simulated/floor/beach/sand/water,/area/space)
 "wY" = (/obj/effect/floor_decal/industrial/warning_white{dir = 5},/turf/simulated/floor/reinforced/grimshart,/area/space)
@@ -152,6 +167,8 @@
 "Am" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "Aw" = (/obj/structure/railing,/turf/simulated/floor/beach/sand/water,/area/space)
 "AA" = (/obj/effect/decal/cleanable/dirt,/obj/structure/sevendrain{id = "drainwater"; _wifi_id = "drainwater"},/turf/simulated/floor/reinforced/grimshart,/area/centcom)
+"Bm" = (/obj/structure/sign/descript{writtenon = "MEDICAL"; pixel_y = -32},/turf/simulated/floor/tiled/dark,/area/centcom)
+"Bt" = (/obj/structure/spatiudoor/medical,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "BA" = (/obj/structure/sevendrain{id = "drainwater"; _wifi_id = "drainwater"},/turf/simulated/floor/tiled/dark,/area/centcom)
 "BC" = (/obj/structure/sevendrain{id = "drainwater"; _wifi_id = "drainwater"},/obj/structure/spatiudoor,/turf/simulated/floor/tiled/dark,/area/centcom)
 "BR" = (/obj/structure/spatiudoor/manual,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/centcom)
@@ -159,16 +176,20 @@
 "Ck" = (/obj/structure/closet/cabinet{pixel_x = 3},/obj/effect/floor_decal/industrial/warning_white,/obj/item/clothing/suit/divingsuit,/obj/item/clothing/head/helmet/divinghelm,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "Cn" = (/obj/machinery/sleeper{dir = 4},/turf/simulated/floor/tiled/dark,/area/centcom)
 "Cp" = (/obj/structure/fluff/strangelight,/turf/simulated/floor/tiled/dark,/area/centcom)
+"Cx" = (/obj/effect/floor_decal/industrial/warning_white,/obj/effect/decal/cleanable/dirt,/obj/structure/poster/alt{pixel_y = -32},/turf/simulated/floor/tiled/dark,/area/centcom)
 "CA" = (/obj/machinery/light{dir = 1},/obj/effect/decal/cleanable/generic,/turf/simulated/floor/tiled/dark,/area/centcom)
 "CC" = (/obj/structure/sevendrain{id = "drainwater"; _wifi_id = "drainwater"},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
+"CF" = (/obj/effect/decal/cleanable/dirt,/obj/structure/sign/descript{pixel_x = -32; writtenon = "MISC STORAGE"},/turf/simulated/floor/tiled/dark,/area/centcom)
 "CG" = (/obj/effect/floor_decal/industrial/warning_white,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "CJ" = (/obj/effect/decal/cleanable/dirt,/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/dark,/area/centcom)
 "CN" = (/obj/structure/bookcase,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "CO" = (/obj/effect/decal/cleanable/generic,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
+"CW" = (/obj/structure/spatiudoor/indoor,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "Db" = (/obj/structure/sevendrain{id = "drainwater"; _wifi_id = "drainwater"},/obj/machinery/light/small/red{dir = 8},/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "Di" = (/obj/effect/decal/cleanable/blood/splatter,/turf/simulated/floor/tiled/dark,/area/centcom)
 "Du" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/portablewaterpump,/obj/machinery/light{dir = 4},/turf/simulated/floor/tiled/dark,/area/centcom)
 "DJ" = (/obj/structure/table/steel,/obj/item/paper_bin{pixel_x = -4; pixel_y = 12},/obj/item/pen{pixel_y = -6; pixel_x = 3},/turf/simulated/floor/tiled/dark,/area/centcom)
+"Eb" = (/obj/structure/table/rack,/obj/effect/floor_decal/industrial/hatch/yellow,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "Em" = (/obj/structure/sevendrain{id = "drainwater"; _wifi_id = "drainwater"},/obj/structure/spatiudoor/indoor,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "Er" = (/obj/machinery/door/blast/id_door{id = "waterinput"},/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "EM" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
@@ -181,6 +202,8 @@
 "FM" = (/obj/structure/spatiudoor/manual,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "FN" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/radiator{pixel_y = -15},/turf/simulated/floor/tiled,/area/centcom)
 "FU" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
+"Ga" = (/obj/structure/poster/alt{pixel_y = -32},/turf/simulated/floor/tiled/dark,/area/centcom)
+"Gc" = (/obj/effect/decal/cleanable/blood/drip,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "Gj" = (/obj/structure/bed/chair/office/dark{dir = 1},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "GQ" = (/obj/structure/window/reinforced/full,/turf/simulated/floor/plating,/area/centcom)
 "GT" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/sevendrain,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
@@ -194,7 +217,7 @@
 "Il" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/bed/chair{dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/landmark/start/maintoff,/obj/structure/radiator{dir = 4; pixel_x = 10},/turf/simulated/floor/tiled/dark,/area/centcom)
 "Is" = (/obj/machinery/door/blast/id_door{id = "iso1"},/turf/simulated/floor/tiled/dark,/area/centcom)
 "Iy" = (/obj/machinery/door/blast/id_door{id = "iso2"},/turf/simulated/floor/tiled/dark,/area/centcom)
-"ID" = (/obj/structure/bookcase,/obj/machinery/light{dir = 1},/turf/simulated/floor/wood/grimshart,/area/centcom)
+"ID" = (/obj/structure/bookcase,/obj/machinery/light{dir = 1},/obj/structure/poster/alt{pixel_y = 32},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "IO" = (/obj/structure/bed/chair/wood{dir = 1; pixel_y = 17},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "IW" = (/obj/structure/railing{icon_state = "mcorneroverlay"; dir = 1},/turf/simulated/floor/beach/sand/water,/area/space)
 "IX" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/turf/simulated/floor/tiled/dark,/area/centcom)
@@ -215,29 +238,32 @@
 "Lw" = (/obj/effect/decal/cleanable/dirt,/obj/item/floppy,/obj/item/floppy,/obj/structure/closet/cabinet{name = "blank floppy disk storage"},/turf/simulated/floor/tiled/dark,/area/centcom)
 "LL" = (/obj/machinery/light/small{dir = 4},/obj/machinery/optable,/turf/simulated/floor/tiled/dark,/area/centcom)
 "Md" = (/obj/effect/wingrille_spawn,/turf/simulated/floor/plating,/area/centcom)
-"Ms" = (/obj/structure/table/steel,/obj/item/paper_bin{pixel_x = -4; pixel_y = 12},/obj/item/pen{pixel_y = -6; pixel_x = 3},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
+"Ms" = (/obj/structure/table/steel,/obj/item/paper_bin{pixel_x = -4; pixel_y = 12},/obj/item/pen{pixel_y = -6; pixel_x = 3},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/poster/alt{pixel_y = -32},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "Mv" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled/dark,/area/centcom)
 "MD" = (/obj/structure/coatrack{pixel_x = -9},/obj/effect/decal/cleanable/blood/splatter,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "ML" = (/obj/structure/sink{dir = 8},/obj/effect/decal/cleanable/generic,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "Na" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
-"NF" = (/obj/structure/table/woodentable,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
+"NF" = (/obj/structure/table/woodentable,/obj/effect/decal/cleanable/dirt,/obj/structure/sign/warning/nosmoking_2{pixel_y = 32},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "NL" = (/obj/effect/floor_decal/industrial/warning_white{dir = 6},/turf/simulated/floor/reinforced/grimshart,/area/space)
 "NN" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/item/stack/teeth,/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "NX" = (/obj/structure/cable{icon_state = "4-8"},/turf/simulated/floor/beach/sand/water,/area/space)
+"NY" = (/obj/effect/decal/cleanable/dirt,/obj/structure/poster/alt{pixel_y = 32},/turf/simulated/floor/tiled/dark,/area/centcom)
+"Oq" = (/obj/item/storage/box/freezer,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "OL" = (/turf/simulated/wall/titanium,/area/centcom)
 "OO" = (/obj/structure/closet/cabinet{pixel_x = 3},/obj/item/material/kitchen/utensil/fork,/obj/item/material/kitchen/utensil/fork,/obj/item/material/kitchen/utensil/fork,/obj/item/material/kitchen/utensil/fork,/obj/item/material/kitchen/utensil/fork,/obj/item/material/kitchen/utensil/fork,/obj/item/material/kitchen/utensil/fork,/obj/item/material/knife,/obj/item/material/knife,/obj/item/material/knife,/obj/item/material/knife,/obj/item/material/knife,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "OP" = (/obj/structure/table/steel,/obj/machinery/spatiuputer/terminal,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "OQ" = (/obj/effect/decal/cleanable/dirt,/obj/effect/landmark/start/logoff,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "OW" = (/obj/structure/table/steel,/obj/item/floppy/communicator,/turf/simulated/floor/tiled/dark,/area/centcom)
 "OX" = (/turf/simulated/floor/beach/sand/water,/area/space)
+"Pv" = (/obj/structure/poster/alt{pixel_y = 32},/turf/simulated/floor/tiled/dark,/area/centcom)
 "Py" = (/obj/machinery/light{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "PA" = (/obj/structure/coatrack{icon_state = "coatrack1"; pixel_y = 20; pixel_x = 10},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "PD" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "Qb" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/centcom)
-"Qf" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/railing{dir = 8},/turf/simulated/floor/tiled/dark,/area/centcom)
+"Qf" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/railing{dir = 8},/obj/structure/poster/alt{pixel_y = -32},/turf/simulated/floor/tiled/dark,/area/centcom)
 "Qn" = (/obj/effect/floor_decal/industrial/loading{dir = 8},/turf/simulated/floor/tiled/dark,/area/centcom)
-"Qo" = (/obj/structure/radiator{dir = 8; pixel_x = -10},/turf/simulated/floor/wood/grimshart,/area/centcom)
-"QB" = (/obj/structure/morgue{dir = 2},/turf/simulated/floor/tiled/dark,/area/centcom)
+"Qo" = (/obj/structure/radiator{dir = 8; pixel_x = -10},/obj/item/cigbutt,/turf/simulated/floor/wood/grimshart,/area/centcom)
+"QB" = (/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "QG" = (/obj/structure/window/reinforced/full,/turf/simulated/floor/tiled/dark,/area/centcom)
 "QJ" = (/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "QP" = (/obj/structure/table/steel,/obj/item/paper_bin{pixel_x = -4; pixel_y = 12},/obj/item/pen{pixel_y = -6; pixel_x = 3},/obj/effect/decal/cleanable/generic,/obj/item/flame/lighter{pixel_y = 5; pixel_x = -10},/turf/simulated/floor/wood/grimshart,/area/centcom)
@@ -250,6 +276,7 @@
 "SK" = (/obj/structure/spatiudoor/indoor,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "SM" = (/obj/machinery/light/small{dir = 4},/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "SP" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/wood/grimshart,/area/centcom)
+"SU" = (/obj/effect/decal/cleanable/dirt,/obj/structure/sign/descript{writtenon = "TO BE ASSIGNED"; pixel_y = -32},/turf/simulated/floor/tiled/dark,/area/centcom)
 "Tn" = (/obj/structure/sevendrain{id = "drainwater"; _wifi_id = "drainwater"},/obj/structure/spatiudoor/indoor,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "Tp" = (/obj/structure/table/steel,/obj/item/storage/fancy/cigarettes/dromedaryco{pixel_x = 9},/obj/item/storage/fancy/cigarettes/dromedaryco{pixel_y = 9},/obj/item/flame/lighter{pixel_y = 5; pixel_x = -10},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "TG" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/wall/titanium,/area/centcom)
@@ -258,16 +285,19 @@
 "Uz" = (/obj/effect/floor_decal/industrial/loading{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "UB" = (/obj/structure/table/steel,/obj/machinery/spatiuputer,/turf/simulated/floor/tiled/dark,/area/centcom)
 "UE" = (/obj/machinery/light,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
+"UX" = (/obj/structure/sign/descript{writtenon = "RATIONS"; pixel_y = -32},/turf/simulated/floor/tiled/dark,/area/centcom)
 "Vc" = (/obj/machinery/door/blast/id_door{id = "execute"},/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "Ve" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled/dark,/area/centcom)
+"Vx" = (/obj/structure/closet/crate/freezer,/obj/item/reagent_containers/ivbag/blood/OMinus,/obj/item/reagent_containers/ivbag/blood/BPlus,/obj/item/reagent_containers/ivbag/blood/OPlus,/obj/item/reagent_containers/ivbag/blood/OPlus,/obj/item/reagent_containers/ivbag/blood/AMinus,/obj/item/reagent_containers/ivbag/blood/APlus,/obj/item/reagent_containers/ivbag/blood/BMinus,/obj/item/reagent_containers/ivbag/blood/BMinus,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "VJ" = (/obj/machinery/computer/operating,/turf/simulated/floor/tiled/dark,/area/centcom)
 "VK" = (/obj/effect/decal/cleanable/dirt,/obj/structure/table/steel,/obj/item/wirecutters{pixel_x = -1; pixel_y = 8},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "VQ" = (/obj/effect/floor_decal/industrial/loading{dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
 "VS" = (/obj/machinery/light{dir = 1},/obj/structure/table/steel,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
-"VY" = (/obj/structure/table/steel,/obj/effect/decal/cleanable/dirt,/obj/machinery/light{dir = 1},/turf/simulated/floor/wood/grimshart,/area/centcom)
+"VY" = (/obj/structure/table/steel,/obj/effect/decal/cleanable/dirt,/obj/machinery/light{dir = 1},/obj/structure/poster/alt{pixel_y = 32},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "Wf" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/drip,/turf/simulated/floor/wood/grimshart,/area/centcom)
 "Wh" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light{dir = 8},/turf/simulated/floor/wood/grimshart,/area/centcom)
 "Wx" = (/obj/structure/fluff/planetdisplay{pixel_x = 15},/turf/simulated/wall/titanium,/area/centcom)
+"WJ" = (/obj/structure/table/rack,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "WK" = (/obj/effect/floor_decal/industrial/warning_white{dir = 9},/turf/simulated/floor/reinforced/grimshart,/area/space)
 "Xi" = (/obj/structure/cable{icon_state = "2-4"},/turf/simulated/floor/beach/sand/water,/area/space)
 "Xn" = (/obj/machinery/light{dir = 1},/obj/structure/table/steel,/obj/item/paper_bin{pixel_x = -4; pixel_y = 12},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
@@ -278,8 +308,9 @@
 "YS" = (/obj/effect/decal/cleanable/dirt,/obj/effect/floor_decal/industrial/hatch/yellow,/obj/structure/radiator{pixel_y = 24},/turf/simulated/floor/tiled/dark,/area/centcom)
 "Zi" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small{dir = 1},/obj/structure/portablewaterpump,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "Zl" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/turf/simulated/floor/wood/grimshart,/area/centcom)
+"Zq" = (/obj/structure/table/rack,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/reinforced/grimshart,/area/centcom)
 "Zv" = (/obj/machinery/light,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
-"ZD" = (/obj/structure/sink{pixel_y = 13},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/centcom)
+"ZD" = (/obj/structure/sink{pixel_y = 13},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/item/cigbutt,/turf/simulated/floor/tiled/dark,/area/centcom)
 
 (1,1,1) = {"
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
@@ -336,33 +367,33 @@ OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXvyOXOXvPJprBJpAmGjAmOWSreQvPOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLOXOXOXOXOXOXvyOXOLOLnEAmJHFHFHIXAmAmKpOLOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLKXOLOXOXOXOXOXOXvyOXOLkehnAmiyAmAmAmFHAmAmeUOLOLOLOLOLOLOLOLOLOLOLOLOLOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLOLQGOLOLOLOLOLOLOLOLOXOLxiAmAmUEFHJHFHUEhnFHLwOLiHOLFHFHAmAmfiwxIXAmFHAmOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLOLQGOLOLOLOLOLOLOLOLOXOLxiAmAmUEFHJHFHUEhnFHLwOLiHOLFHFHNYAmfiwxIXAmFHAmOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLzeDJoqhndnOLvSVKrpscCiOLOLOLOLOLOLOLOLqgOLOLOLOLOLOLHeOLFHAmAmAmAmyoFHFHAmAmOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLcEclhnBAxtBCsspLglqJzXOLJwJCbDjhlZOLAmAmFHOLbtsrcosryjOLPyJjOLOLOLOLOLOLAmAmOLOLOLOLOLOLOLOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLkAGQGQOLOLOLMDWfmHNNkZOLoPNaNakmOQOLFHAmAmOLQbjNFNyjcSOLAmFHOLOXOXOXOXOLPyJjOLnOIDnOfAVYspOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLkmqyhpOLZiOLOLKeOLOLOLOLOLFMOLOLOLOLmOxTiAOLBROLOLOLOLOLFHFHOLOLOLOLOLOLAmAmKsphphyUphPDeiOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLiIkzkmOLMLOLAmAmJHCAFHFHFHAmqQAmAmFHFHFHFHFHFHFHwxFHAmhnFHAmVeFHfiAmucAmAmAmOLWhZlyUigfAufOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLVcOLOLFUUnFHFHAmFHFHFHFHxTFHFHFHFHFHFHFHAmAmAmAmAmFHJrAmAmFHAmAmJHZvAmAmFHOLnOyUphZlphyUOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLiIkzkmOLMLOLAmAmJHCAFHPvFHAmqQAmNYFHFHFHFHFHFHPvwxFHAmhnFHAmVeFHfiAmucNYAmAmOLWhZlyUigfAufOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLVcOLOLFUUnFHGaAmFHFHGaFHxTFHFHFHFHFHFHFHAmAmAmAmAmFHJrAmAmFHAmAmJHZvAmAmFHOLnOyUphZlphyUOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLOLOLOLKeOLOLOLOLMdMdMdOLAmxTAmOLMdMdMdOLOLOLFtOLOLOLOLOLOLOLAmFHOLCNfbyUOLOLKeOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLyuQPQJfbPAOLOXOLmOlWiAOLFHAmFHOLmOlWiAOLlKklAmKWdcFHLLOLeOOLIXFHOLyUsJyUOLwzzjOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLyuQPQJfbPAOLOXOLmOlWiAOLFHAmFHOLmOlWiAOLlKklAmKWdcPvLLOLeOOLIXFHOLyUsJyUOLwzzjOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLUdyUyUsJjYOLOXOLMdMdMdOLOLqgOLOLMdMdMdOLAmAmAmAmdcFHVJOLehuzJHAmOLnOnOtKOLOPMsOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLdvZlyUXXyHOLOXOLFHFHhncUFHucFHcUAmAmFHOLHIIXAmJjOLOLOLOLOLOLAmFHOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLMdMdOLOLOLOXOLPyFHAmAmJHJHJHAmAmAmJjOLFHpowVAmdcFHLLOLOXOLPyagOLUBYSCJgmZDvjOLftyTftftftftftftOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLAmAmFHAmFHFHAmCOAmJHAmFtAmAmAmFHdcFHVJOLOXOLAmAmOLpOCJDuOLtBIlOLOLOLftAANaNayTftErOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLmOFHJHAmAmAmAmAmAmAmRkOLYPdBAmeWOLOLOLOLOXOLAmFHOLnogMREOLOLOLOLgXfnftftftftftSMOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLFHFHJHFHWxOLOLAmJHJHFHOLCnAmAmzoOLpYTpfnOXOLAmFHpNaheFHdCJCJcuFnGTsFUzAAhEftyTftErOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLmOAmJHFHcUFHcUAmupJHJjOLnEdBhndBOLeJugfnOXOLIXFHOLFHJHJHmbAdhyOLEMfnftftftftftSMOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLFHFHAmFHFHFHAmJHAmFHAmOLxtFHdBAmqhJHEXfnOXOLmOJjOLMvAmAmqHCJgBOLOLOLNaAAftftAAftErOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLAmFHFHxTAmAmJHFHFHAmAmOLIsOLIyOLOLOLOLOLOXOLFHAmOLXFFHJHQfzsqaOLftyTftNaNaNaftftOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLPyAmAmtkFHAmAmAmAmJHiAOLJDOLDiOLFHQBQBOLOXOLCCBAOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLAmAmyoJHAmyoAmAmUEJHJHOLDiOLJDOLFHFHFHOLOXfnAmFHfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLOLTnOLOLOLOLOLOLSKOLfnOLfnOLOLOLOLOLOXfnAmAmfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLCpCCJHAmCCCpOLOXOLHEOLOXOXOXOXOXOXOXOXOXfnJHJHfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLlEHazPAmQnlEOLOXOLzROLOLOLOLOLOLOLOLOLOXfnAmAmfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLCpCCAmJHRGSyOLOXOLphrtNFyghueBvTSPOOOLfnfnmQxbfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLlEHakBIXVQaKOLOXOLQocPIOyUhGhGphyUZlEmJHJHJHAmfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLawCGkOCGCGCkOLOXOLIgeBeBphmLcjcYphphttYeJHAmAmfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
-OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLaGOLaGOLOLOLOXOLqxUdUdiVUdUdfbdQgPTGfnfnfnfnfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLFHFHJHFHWxOLOLAmJHJHFHOLCnAmAmzoOLpYTpfnOXOLAmFHpNaheFHdCJgAcuFnGTsFUzAAhEftyTftErOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLmOAmJHFHcUFHcUAmupJHJjOLnEdBhndBOLeJugfnOXOLIXFHOLFHJHJHmbAdhyOLEMfnftftftftftSMOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLFHFHwxFHPvFHAmFHwxAmAmAmFHAmwxFHPvFHIXFHqgFHFHAmFHFHFHAmJHAmFHAmOLxtFHdBAmqhJHEXfnOXOLmOJjOLMvAmAmqHCJgBOLOLOLNaAAftftAAftErOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLFHFHAmSUAmIXAmFHFHBmFHFHFHFHFHUXAmAmAmAmOLCFFHFHxTAmAmJHFHFHAmAmOLIsOLIyOLOLOLOLOLOXOLFHAmOLXFFHJHQfzsqaOLftyTftNaNaNaftftOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLCWOLOLOLOLOLBtOLOLOLOLOLCWOLOLOLOLOLOLPyAmAmtkFHAmAmAmAmJHiAOLJDOLDiOLOXOXOXOXOXOLCCBAOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLmFNamGOLOXOLiCNahpOLOXOLwUNaWJOLOXOXOXOLAmAmyoJHAmyoAmAmUEJHJHOLDiOLJDOLOXOXOXOXOXfnAmFHfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLQBhPmGOLOXOLbzNadIOLOXOLftNaWJOLOXOXOXOLOLOLOLTnOLOLOLOLOLOLSKOLfnOLfnOLOXOXOXOXOXfnAmAmfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLmGFUEbOLOXOLOqGcraOLOXOLWJftZqOLOXOXOXOXOLCpCCJHAmiGCpOLOXOLHEOLOXOXOXOXOXOXOXOXOXfnJHJHfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLuwFUQBOLOXOLNaVxftOLOXOLWJftqiOLOXOXOXOXOLlEHazPAmQnlEOLOXOLzROLOLOLOLOLOLOLOLOLOXfnAmAmfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLOLOLOXOLkpiIbzOLOXOLZqhPZqOLOXOXOXOXOLCpCCAmJHRGSyOLOXOLphrtNFyghueBvTSPOOOLfnfnmQxbfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLOLOLOLOXOLOLOLOLOLOXOXOXOXOLlEHakBIXVQaKOLOXOLQocPIOyUhGhGphwlZlEmJHJHJHAmfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLawCGkOCGCxCkOLOXOLIgeBeBphmLcjcYphphttYeJHAmAmfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
+OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLOLaGOLaGOLOLOLOXOLqxUdUdiVUdUdthdQgPTGfnfnfnfnfnOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLDbOLIiOLOXOXOXOLOLfnfnOLfnfnOLOLOLOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOLaGOLaGOLOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
 OXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXvAOXvAOXvAOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOX
