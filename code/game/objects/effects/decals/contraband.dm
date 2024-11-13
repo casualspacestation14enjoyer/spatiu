@@ -176,6 +176,7 @@
 	layer = ABOVE_HUMAN_LAYER
 
 /obj/structure/poster/alt
+	name = "poster"
 	icon = 'icons/obj/posters.dmi'
 	icon_state = "poster_triangle"
 

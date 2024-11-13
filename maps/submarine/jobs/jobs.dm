@@ -26,6 +26,10 @@
 
 	equip(var/mob/living/carbon/human/H)
 		..()
+		var/obj/structure/statue/kapitain/statue = locate() in world
+		if(statue)
+			statue.named = H.real_name
+			statue.update_icon()
 		H.voice_in_head(pick(GLOB.lone_thoughts))
 		to_chat(H, "<b>Password</b>: [GLOB.cargo_password]")
 		H.mind.store_memory("<b>Password</b>: [GLOB.cargo_password]")
@@ -52,6 +56,10 @@
 
 	equip(var/mob/living/carbon/human/H)
 		..()
+		var/obj/structure/statue/marshal/statue = locate() in world
+		if(statue)
+			statue.named = H.real_name
+			statue.update_icon()
 		H.voice_in_head(pick(GLOB.lone_thoughts))
 		H.add_stats(rand(17,20), 10, 9)
 		H.fully_replace_character_name("Mar. [H.real_name]")

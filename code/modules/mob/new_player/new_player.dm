@@ -420,7 +420,7 @@
 
 	var/list/dat = list("<html><body><center>")
 	dat += "<b>Welcome, [name].<br></b>"
-	dat += "Round Duration: [roundduration2text()]<br>"
+	//dat += "Round Duration: [roundduration2text()]<br>"
 
 	if(evacuation_controller.has_evacuated())
 		dat += "<font color='red'><b>The [station_name()] has been evacuated.</b></font><br>"
@@ -430,8 +430,8 @@
 		else                                           // Crew transfer initiated
 			dat += "<font color='red'>The [station_name()] is currently undergoing crew transfer procedures.</font><br>"
 
-	dat += "Choose from the following open/valid positions:<br>"
-	dat += "<a href='byond://?src=\ref[src];invalid_jobs=1'>[show_invalid_jobs ? "Hide":"Show"] unavailable jobs.</a><br>"
+	//dat += "Choose from the following open/valid positions:<br>"
+	//dat += "<a href='byond://?src=\ref[src];invalid_jobs=1'>[show_invalid_jobs ? "Hide":"Show"] unavailable jobs.</a><br>"
 
 	var/list/jobcats = list(  // This is designed for warfare, in a warfare-less environment, this will need to be changed
 		"Team Red"=list("color"="#b27676", "jobs"=list()),

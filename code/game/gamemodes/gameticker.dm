@@ -1,5 +1,16 @@
 var/global/datum/controller/gameticker/ticker
 
+GLOBAL_LIST_INIT(roundstart_messages, list("I will suffer.",
+	"And then there were none.",
+	"Enjoy the round if you can.",
+	"It's all over now.",
+	"It's been months.",
+	"Build your wings on the way down.",
+	"Enjoy the round!",
+	"Welcome to the 'Party.",
+	"Praise Cthulhu!"
+	))
+
 /datum/controller/gameticker
 	var/const/restart_timeout = 600
 	var/current_state = GAME_STATE_PREGAME
@@ -137,7 +148,7 @@ var/global/datum/controller/gameticker/ticker
 
 	spawn(0)//Forking here so we dont have to wait for this to finish
 		mode.post_setup()
-		var/message = pick(file2list("config/roundstart_messages.txt"))
+		var/message = pick(GLOB.roundstart_messages)
 		to_world("<FONT color='red'><B>[message]</B></FONT>")
 		sound_to(world, sound(GLOB.using_map.welcome_sound))
 		if(SSaspects.chosen_aspect)
