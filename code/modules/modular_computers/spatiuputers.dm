@@ -70,12 +70,13 @@
 		return
 	return ..()
 
-/obj/machinery/spatiuputer/proc/sendmessage(var/message, var/mob/living/L)
+/obj/machinery/spatiuputer/proc/sendmessage(var/message, var/mob/living/L) // the mob living var is a holdover from worse code, i realized i could do it better but im leaving this here, since im too lazy
 	recentcommands += message
 	playsound(src, 'sound/effects/computer/consolebeep.ogg', 50)
-	to_chat(L, "<font color=#4af626>[message]</font>")
+	for(var/mob/living/L in view(2,src))
+		to_chat(L, "<font color=#4af626>[message]</font>")
 
-/obj/machinery/spatiuputer/proc/send2logs(var/message, var/mob/living/L)
+/obj/machinery/spatiuputer/proc/send2logs(var/message)
 	recentcommands += message
 
 /obj/machinery/spatiuputer/proc/processcommand(var/command, var/mob/living/carbon/human/H)
